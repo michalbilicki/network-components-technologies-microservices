@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/ApplicationCore/ApplicationCore.iml" filepath="$PROJECT_DIR$/ApplicationCore/ApplicationCore.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ApplicationPorts/ApplicationPorts.iml" filepath="$PROJECT_DIR$/ApplicationPorts/ApplicationPorts.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ApplicationCore/ApplicationServices/ApplicationServices.iml" filepath="$PROJECT_DIR$/ApplicationCore/ApplicationServices/ApplicationServices.iml" />
+      <module fileurl="file://$PROJECT_DIR$/RepositoriesAdapters/DataModel/DataModel.iml" filepath="$PROJECT_DIR$/RepositoriesAdapters/DataModel/DataModel.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ApplicationCore/DomainModel/DomainModel.iml" filepath="$PROJECT_DIR$/ApplicationCore/DomainModel/DomainModel.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ViewAdapter/Model/Model.iml" filepath="$PROJECT_DIR$/ViewAdapter/Model/Model.iml" />
+      <module fileurl="file://$PROJECT_DIR$/RepositoriesAdapters/RepositoriesAdapters.iml" filepath="$PROJECT_DIR$/RepositoriesAdapters/RepositoriesAdapters.iml" />
+      <module fileurl="file://$PROJECT_DIR$/RepositoriesAdapters/Repository/Repository.iml" filepath="$PROJECT_DIR$/RepositoriesAdapters/Repository/Repository.iml" />
+      <module fileurl="file://$PROJECT_DIR$/RepositoriesAdapters/RepositoryAdapter/RepositoryAdapter.iml" filepath="$PROJECT_DIR$/RepositoriesAdapters/RepositoryAdapter/RepositoryAdapter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ViewAdapter/Rest/Rest.iml" filepath="$PROJECT_DIR$/ViewAdapter/Rest/Rest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ViewAdapter/ViewAdapter.iml" filepath="$PROJECT_DIR$/ViewAdapter/ViewAdapter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/client.iml" filepath="$PROJECT_DIR$/.idea/client.iml" />
+    </modules>
+  </component>
+</project>
