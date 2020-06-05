@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>client</artifactId>
+        <groupId>pl.lapciakbilicki</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>Rest</module>
+        <module>Model</module>
+        <module>Queue</module>
+    </modules>
+
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>QueueAdapter</artifactId>
+
+    <dependencies>
+        <dependency>
+            <groupId>jakarta.platform</groupId>
+            <artifactId>jakarta.jakartaee-api</artifactId>
+            <version>8.0.0</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>pl.lapciakbilicki</groupId>
+            <artifactId>DomainModel</artifactId>
+            <version>1.0-SNAPSHOT</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.glassfish.metro</groupId>
+            <artifactId>webservices-api</artifactId>
+            <version>2.4.4-b01</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.apache.axis2/axis2-java2wsdl -->
+        <dependency>
+            <groupId>org.apache.axis2</groupId>
+            <artifactId>axis2-java2wsdl</artifactId>
+            <version>1.6.2</version>
+        </dependency>
+
+
+    </dependencies>
+</project>

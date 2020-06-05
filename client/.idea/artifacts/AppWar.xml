@@ -13,6 +13,8 @@
           <element id="module-output" name="RepositoryAdapter" />
           <element id="module-output" name="Model" />
           <element id="module-output" name="Rest" />
+          <element id="module-output" name="Queue" />
+          <element id="module-output" name="Common" />
         </element>
         <element id="directory" name="lib">
           <element id="library" level="project" name="Maven: org.glassfish:javax.faces:2.3.0" />
