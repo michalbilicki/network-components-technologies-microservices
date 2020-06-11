@@ -11,6 +11,8 @@ public class Consts {
     public static String GET_ACCOUNT_QUEUE = "GET_ACCOUNT_QUEUE";
     public static String GET_ALL_ACCOUNT_QUEUE = "GET_ALL_ACCOUNT_QUEUE";
 
+    public static String ADD_CLIENT_QUEUE = "ADD_CLIENT_QUEUE";
+
     public static String ERROR = "ERROR";
 
 }

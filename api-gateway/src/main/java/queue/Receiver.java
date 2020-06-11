@@ -38,9 +38,7 @@ public class Receiver {
             }, consumerTag -> {
             });
 
-            System.out.println("---debug---");
             String result = response.take();
-            System.out.println("---debug---");
 
             channel.basicCancel(ctag);
             System.out.println("[ RECEIVE ]    API_GATEWAY: " + result);

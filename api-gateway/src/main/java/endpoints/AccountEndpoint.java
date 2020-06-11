@@ -1,9 +1,11 @@
 package endpoints;
 
 import dto.AccountDto;
+import dto.ClientDto;
 import queue.Receiver;
 import queue.Sender;
 import utils.Consts;
+import utils.exception.EndpointException;
 
 import javax.json.bind.Jsonb;
 import javax.json.bind.JsonbBuilder;
@@ -21,17 +23,37 @@ public class AccountEndpoint {
     @Path("add")
     @Consumes({MediaType.APPLICATION_JSON})
     public Response addAccount(AccountDto accountDto) {
-        String corrId = UUID.randomUUID().toString();
-        accountDto.setCorrId(corrId);
+        try {
+            boolean result;
+            String corrId = UUID.randomUUID().toString();
+            accountDto.setCorrId(corrId);
 
-        Sender<AccountDto> sender = new Sender<AccountDto>(Consts.ADD_ACCOUNT_QUEUE);
-        sender.send(accountDto, corrId);
+            Sender<AccountDto> accountSender = new Sender<AccountDto>(Consts.ADD_ACCOUNT_QUEUE);
+            accountSender.send(accountDto, corrId);
 
-        Receiver receiver = new Receiver(Consts.ADD_ACCOUNT_QUEUE);
+            Receiver accountReceiver = new Receiver(Consts.ADD_ACCOUNT_QUEUE);
+            result = Boolean.parseBoolean(accountReceiver.receive(corrId));
 
-        if (Boolean.parseBoolean(receiver.receive(corrId))) {
-            return Response.ok().build();
-        } else {
+            if (result && !accountDto.getRoles().contains("Client")) {
+                return Response.ok().build();
+            } else if (result && accountDto.getRoles().contains("Client")) {
+                //TODO check!!!
+//                ClientDto clientDto = ClientDto.convertFrom(accountDto);
+//
+//                Sender<ClientDto> clientSender = new Sender<ClientDto>(Consts.ADD_CLIENT_QUEUE);
+//                clientSender.send(clientDto, corrId);
+//
+//                Receiver clientReceiver = new Receiver(Consts.ADD_CLIENT_QUEUE);
+//
+//                if (Boolean.parseBoolean(clientReceiver.receive(corrId))) {
+                    return Response.ok().build();
+//                } else {
+//                    throw new EndpointException();
+//                }
+            } else {
+                throw new EndpointException();
+            }
+        } catch (EndpointException e) {
             return Response.status(Response.Status.BAD_REQUEST).build();
         }
     }
