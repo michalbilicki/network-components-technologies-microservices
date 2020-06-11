@@ -7,11 +7,9 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="Queue" />
         <module name="DataModel" />
         <module name="ApplicationServices" />
         <module name="Repository" />
-        <module name="Common" />
         <module name="DomainModel" />
         <module name="ApplicationPorts" />
         <module name="RepositoryAdapter" />
@@ -24,17 +22,15 @@
       <module name="ApplicationPorts" target="8" />
       <module name="ApplicationServices" target="8" />
       <module name="client" target="8" />
-      <module name="Common" target="8" />
       <module name="DataModel" target="8" />
       <module name="DomainModel" target="8" />
       <module name="Model" target="8" />
-      <module name="Queue" target="8" />
-      <module name="QueueAdapter" target="8" />
       <module name="RepositoriesAdapters" target="8" />
       <module name="Repository" target="8" />
       <module name="RepositoryAdapter" target="8" />
       <module name="Rest" target="8" />
       <module name="Soap" target="11" />
+      <module name="ViewAdapter" target="8" />
     </bytecodeTargetLevel>
   </component>
 </project>

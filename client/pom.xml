@@ -13,8 +13,7 @@
         <module>ApplicationCore</module>
         <module>RepositoriesAdapters</module>
         <module>ApplicationPorts</module>
-        <module>QueueAdapter</module>
-        <module>Common</module>
+        <module>ViewAdapter</module>
         <!--        <module>GUI</module>-->
     </modules>
 

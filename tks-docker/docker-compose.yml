@@ -1,0 +1,45 @@
+version: '3'
+
+networks:
+  test-network:
+    external:
+      name: test-network
+
+services:
+  rabbitmq:
+    image: rabbitmq:3-management
+    networks: 
+      - test-network
+    ports:
+      - 5672:5672
+      - 15672:15672
+
+  api-gateway-service:
+    build: ./api-gateway-service
+    depends_on: 
+      - rabbitmq
+    networks: 
+      - test-network
+    ports:
+      - 4848:4848
+      - 8080:8080
+  
+  account:
+    build: ./service1-account
+    depends_on: 
+      - api-gateway-service
+    networks: 
+      - test-network
+    ports:
+      - 4801:4848
+      - 8001:8080
+
+  client:
+    build: ./service2-client
+    depends_on: 
+      - api-gateway-service
+    networks: 
+      - test-network
+    ports:
+      - 4802:4848
+      - 8002:8080

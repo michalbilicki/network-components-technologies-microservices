@@ -14,7 +14,6 @@
     <orderEntry type="module" module-name="DomainModel" />
     <orderEntry type="module" module-name="ApplicationPorts" />
     <orderEntry type="module" module-name="Repository" />
-    <orderEntry type="module" module-name="Common" />
     <orderEntry type="module" module-name="RepositoryAdapter" />
     <orderEntry type="module" module-name="DataModel" />
     <orderEntry type="library" name="Maven: com.rabbitmq:amqp-client:5.9.0" level="project" />

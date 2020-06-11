@@ -4,14 +4,10 @@
     <file url="file://$PROJECT_DIR$/ApplicationCore/ApplicationServices/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ApplicationCore/DomainModel/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ApplicationPorts/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/Common/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/Common/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/QueueAdapter/Model/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/QueueAdapter/Queue/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/QueueAdapter/Queue/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/QueueAdapter/Rest/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/RepositoriesAdapters/DataModel/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/RepositoriesAdapters/Repository/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/RepositoriesAdapters/RepositoryAdapter/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ViewAdapter/Model/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ViewAdapter/Rest/src/main/java" charset="UTF-8" />
   </component>
 </project>

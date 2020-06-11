@@ -48,11 +48,8 @@ public class AddAccountReceiver implements Serializable {
                     AccountDto accountDto = jsonb.fromJson(message, AccountDto.class);
                     System.out.println("[ RECEIVE ] ACCOUNT - add account - " + accountDto.toString());
 
-                    System.out.println("---debug---");
                     ViewAccountConverter viewAccountConverter = new ViewAccountConverter();
-                    System.out.println("---debug---");
                     Account account = viewAccountConverter.convertFrom(accountDto);
-                    System.out.println("---debug---");
 
                     Sender sender = new Sender(Consts.ADD_ACCOUNT_QUEUE);
                     try {

@@ -1,6 +1,6 @@
 <component name="ArtifactManager">
   <artifact type="war" name="AppWar">
-    <output-path>$PROJECT_DIR$/out/artifacts/AppWar</output-path>
+    <output-path>$PROJECT_DIR$/../tks-docker/service2-client/war</output-path>
     <root id="archive" name="AppWar.war">
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
@@ -13,8 +13,6 @@
           <element id="module-output" name="RepositoryAdapter" />
           <element id="module-output" name="Model" />
           <element id="module-output" name="Rest" />
-          <element id="module-output" name="Queue" />
-          <element id="module-output" name="Common" />
         </element>
         <element id="directory" name="lib">
           <element id="library" level="project" name="Maven: org.glassfish:javax.faces:2.3.0" />
