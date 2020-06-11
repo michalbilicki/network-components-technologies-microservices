@@ -16,7 +16,7 @@ import java.time.LocalDateTime;
 @XmlType(namespace = "http://lapciakbilicki.pl/reservationDetails", name="reservationDetails", propOrder = {})
 @XmlRootElement(name = "ReservationDetails")
 @XmlAccessorType(XmlAccessType.FIELD)
-public class ReservationDetailsRestDTO implements Serializable {
+public class ReservationDetailsDto implements Serializable {
 
     @NotNull
     public String clientId;

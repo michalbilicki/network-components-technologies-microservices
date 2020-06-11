@@ -1,4 +1,4 @@
-package dto;
+package Model.dto;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;
@@ -17,6 +17,7 @@ public class BasketballFacilityDto extends SportsFacilityDto {
     private double maxHeightOfBasket;
 
     public BasketballFacilityDto() {
+
     }
 
     public BasketballFacilityDto(String id, double pricePerHours, boolean access, FieldDto field, String name, int numberOfBasket, double minHeightOfBasket, double maxHeightOfBasket) {
@@ -25,5 +26,4 @@ public class BasketballFacilityDto extends SportsFacilityDto {
         this.minHeightOfBasket = minHeightOfBasket;
         this.maxHeightOfBasket = maxHeightOfBasket;
     }
-
 }

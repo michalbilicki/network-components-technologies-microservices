@@ -25,29 +25,29 @@ public class ReservationTest extends AbstractContainerBase {
                 .request(MediaType.APPLICATION_JSON)
                 .get();
 
-        List<ClientRestDTO> clientDTOList = response
-                .readEntity(new GenericType<ArrayList<ClientRestDTO>>() {
+        List<ClientDto> clientDTOList = response
+                .readEntity(new GenericType<ArrayList<ClientDto>>() {
                 });
 
         clientId = clientDTOList.get(0).getId();
 
-        BasketballFacilityRestDTO basketballFacilityRestDTO = new BasketballFacilityRestDTO();
-        FieldRestDTO FieldRestDTO = new FieldRestDTO();
-        FieldRestDTO.setTypeOfGround("test");
-        FieldRestDTO.setSurfaceArea(10);
-        FieldRestDTO.setMaxAmountOfPeople(10);
-        basketballFacilityRestDTO.setId(facilityId);
-        basketballFacilityRestDTO.setNumberOfBasket(10);
-        basketballFacilityRestDTO.setMinHeightOfBasket(3);
-        basketballFacilityRestDTO.setMaxHeightOfBasket(5);
-        basketballFacilityRestDTO.setAccess(true);
-        basketballFacilityRestDTO.setField(FieldRestDTO);
-        basketballFacilityRestDTO.setName("test");
-        basketballFacilityRestDTO.setPricePerHours(10);
+        BasketballFacilityDto basketballFacilityDto = new BasketballFacilityDto();
+        FieldDto FieldDto = new FieldDto();
+        FieldDto.setTypeOfGround("test");
+        FieldDto.setSurfaceArea(10);
+        FieldDto.setMaxAmountOfPeople(10);
+        basketballFacilityDto.setId(facilityId);
+        basketballFacilityDto.setNumberOfBasket(10);
+        basketballFacilityDto.setMinHeightOfBasket(3);
+        basketballFacilityDto.setMaxHeightOfBasket(5);
+        basketballFacilityDto.setAccess(true);
+        basketballFacilityDto.setField(FieldDto);
+        basketballFacilityDto.setName("test");
+        basketballFacilityDto.setPricePerHours(10);
         response = client.target(BASE_URL)
                 .path("facility/basketball")
                 .request(MediaType.APPLICATION_JSON)
-                .post(Entity.entity(jsonb.toJson(basketballFacilityRestDTO), MediaType.APPLICATION_JSON));
+                .post(Entity.entity(jsonb.toJson(basketballFacilityDto), MediaType.APPLICATION_JSON));
         int i = response.getStatus();
     }
 
@@ -55,7 +55,7 @@ public class ReservationTest extends AbstractContainerBase {
     @Order(1)
     public void createReservationTest() {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm");
-        ReservationDetailsRestDTO reservationDetailsDTO = new ReservationDetailsRestDTO();
+        ReservationDetailsDto reservationDetailsDTO = new ReservationDetailsDto();
         reservationDetailsDTO.setClientId(clientId);
         reservationDetailsDTO.setSportsFacilityId(facilityId);
         String date = "2020-07-01 11:30";
@@ -82,7 +82,7 @@ public class ReservationTest extends AbstractContainerBase {
     public void createReservationWrongIdTest() {
         String date = "2020-07-01 11:30";
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm");
-        ReservationDetailsRestDTO reservationDetailsDTO = new ReservationDetailsRestDTO();
+        ReservationDetailsDto reservationDetailsDTO = new ReservationDetailsDto();
         reservationDetailsDTO.setClientId("12");
         reservationDetailsDTO.setSportsFacilityId("13");
         reservationDetailsDTO.setStartDate(LocalDateTime.parse(date, formatter));
@@ -106,7 +106,7 @@ public class ReservationTest extends AbstractContainerBase {
                 .get();
 
         Assertions.assertEquals(200, response.getStatus());
-        List<ReservationRestDTO> reservationDTOList = response.readEntity(new GenericType<List<ReservationRestDTO>>() {
+        List<ReservationDto> reservationDTOList = response.readEntity(new GenericType<List<ReservationDto>>() {
         });
         Assertions.assertEquals(1, reservationDTOList.size());
         reservationId = reservationDTOList.get(0).getId();
@@ -120,7 +120,7 @@ public class ReservationTest extends AbstractContainerBase {
                 .path("reservation/" + reservationId)
                 .request(MediaType.APPLICATION_JSON)
                 .get();
-        ReservationRestDTO reservationDTO = response.readEntity(ReservationRestDTO.class);
+        ReservationDto reservationDTO = response.readEntity(ReservationDto.class);
         Assertions.assertEquals(200, response.getStatus());
         Assertions.assertEquals(reservationId, reservationDTO.getId());
     }
@@ -144,7 +144,7 @@ public class ReservationTest extends AbstractContainerBase {
                 .path("reservation/client/" + clientId)
                 .request(MediaType.APPLICATION_JSON)
                 .get();
-        List<ReservationRestDTO> reservationDTOS = response.readEntity(new GenericType<List<ReservationRestDTO>>() {
+        List<ReservationDto> reservationDTOS = response.readEntity(new GenericType<List<ReservationDto>>() {
         });
         Assertions.assertEquals(200, response.getStatus());
         Assertions.assertEquals(1, reservationDTOS.size());
@@ -164,7 +164,7 @@ public class ReservationTest extends AbstractContainerBase {
                 .path("reservation/" + reservationId)
                 .request(MediaType.APPLICATION_JSON)
                 .get();
-        ReservationRestDTO reservationDTO = response.readEntity(ReservationRestDTO.class);
+        ReservationDto reservationDTO = response.readEntity(ReservationDto.class);
         Assertions.assertFalse(reservationDTO.isActive());
     }
 
@@ -183,7 +183,7 @@ public class ReservationTest extends AbstractContainerBase {
                 .request(MediaType.APPLICATION_JSON)
                 .get();
 
-        List<ReservationRestDTO> reservationDTOS = response.readEntity(new GenericType<List<ReservationRestDTO>>() {
+        List<ReservationDto> reservationDTOS = response.readEntity(new GenericType<List<ReservationDto>>() {
         });
         Assertions.assertEquals(0, reservationDTOS.size());
     }

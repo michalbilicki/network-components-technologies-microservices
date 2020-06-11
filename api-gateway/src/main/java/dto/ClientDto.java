@@ -19,15 +19,14 @@ public class ClientDto implements Serializable {
 
     private boolean active;
 
-    private String corrId;
+//    private String corrId;
 
     public static ClientDto convertFrom(AccountDto accountDto) {
         return new ClientDto(
                 accountDto.getId(),
                 accountDto.getLogin(),
                 accountDto.getFullName(),
-                accountDto.isActive(),
-                accountDto.getCorrId()
+                accountDto.isActive()
         );
     }
 

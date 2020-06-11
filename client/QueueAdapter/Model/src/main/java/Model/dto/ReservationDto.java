@@ -13,7 +13,7 @@ import java.time.LocalDateTime;
 @JsonbNillable
 @AllArgsConstructor
 @NoArgsConstructor
-public class ReservationRestDTO implements Serializable {
+public class ReservationDto implements Serializable {
 
     private String id;
     private String clientId;

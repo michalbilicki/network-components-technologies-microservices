@@ -1,11 +1,11 @@
 package endpoints;
 
-import ApplicationPorts.User.SportFacilityUseCase;
-import Model.ViewFacilityRestConverter;
+import ApplicationPorts.User.SportFacilityServiceUseCase;
+import Model.ViewFacilityConverter;
 import DomainModel.SportsFacility;
-import Model.dto.BasketballFacilityRestDTO;
-import Model.dto.FootballFacilityRestDTO;
-import Model.dto.SportsFacilityRestDTO;
+import Model.dto.BasketballFacilityDto;
+import Model.dto.FootballFacilityDto;
+import Model.dto.SportsFacilityDto;
 import exceptions.RepositoryConverterException;
 import exceptions.RepositoryException;
 import exceptions.ViewConverterException;
@@ -22,7 +22,7 @@ import java.util.UUID;
 public class FacilityEndpoint {
 
     @Inject
-    private SportFacilityUseCase sportFacilityUseCase;
+    private SportFacilityServiceUseCase sportFacilityServiceUseCase;
 
     public FacilityEndpoint() {
 
@@ -33,8 +33,8 @@ public class FacilityEndpoint {
     @Produces(MediaType.APPLICATION_JSON)
     public Response getSportsFacility(@PathParam("id") String id) {
         try {
-            SportsFacilityRestDTO sportsFacilityDTO = null;
-            sportsFacilityDTO = ViewFacilityRestConverter.convertTo(sportFacilityUseCase.getSportsFacility(UUID.fromString(id)));
+            SportsFacilityDto sportsFacilityDTO = null;
+            sportsFacilityDTO = ViewFacilityConverter.convertToDto(sportFacilityServiceUseCase.getSportsFacility(UUID.fromString(id)));
             return Response.ok().entity(sportsFacilityDTO).build();
         } catch (ViewConverterException | RepositoryConverterException | RepositoryException e) {
             return Response.status(Response.Status.BAD_REQUEST).build();
@@ -46,10 +46,10 @@ public class FacilityEndpoint {
     @Produces(MediaType.APPLICATION_JSON)
     public Response getAll() {
         try {
-            List<SportsFacility> list = sportFacilityUseCase.getAllSportsFacilities();
-            List<SportsFacilityRestDTO> result = new ArrayList<SportsFacilityRestDTO>();
+            List<SportsFacility> list = sportFacilityServiceUseCase.getAllSportsFacilities();
+            List<SportsFacilityDto> result = new ArrayList<SportsFacilityDto>();
             for (SportsFacility item : list) {
-                result.add(ViewFacilityRestConverter.convertTo(item));
+                result.add(ViewFacilityConverter.convertToDto(item));
             }
             return Response.ok().entity(result).build();
         } catch (RepositoryConverterException | ViewConverterException e) {
@@ -60,9 +60,9 @@ public class FacilityEndpoint {
     @POST
     @Path("add/football")
     @Consumes(MediaType.APPLICATION_JSON)
-    public Response addFootballFacility(FootballFacilityRestDTO footballFacilityDTO) {
+    public Response addFootballFacility(FootballFacilityDto footballFacilityDTO) {
         try {
-            sportFacilityUseCase.addSportsFacility(ViewFacilityRestConverter.convertFrom(footballFacilityDTO));
+            sportFacilityServiceUseCase.addSportsFacility(ViewFacilityConverter.convertFrom(footballFacilityDTO));
             return Response.ok().build();
         } catch (ViewConverterException | RepositoryConverterException | RepositoryException e) {
             return Response.status(Response.Status.BAD_REQUEST).build();
@@ -72,9 +72,9 @@ public class FacilityEndpoint {
     @POST
     @Path("add/basketball")
     @Consumes(MediaType.APPLICATION_JSON)
-    public Response addBasketBallFacility(BasketballFacilityRestDTO basketballFacilityDTO) {
+    public Response addBasketBallFacility(BasketballFacilityDto basketballFacilityDTO) {
         try {
-            sportFacilityUseCase.addSportsFacility(ViewFacilityRestConverter.convertFrom(basketballFacilityDTO));
+            sportFacilityServiceUseCase.addSportsFacility(ViewFacilityConverter.convertFrom(basketballFacilityDTO));
             return Response.ok().build();
         } catch (ViewConverterException | RepositoryConverterException | RepositoryException e) {
             return Response.status(Response.Status.BAD_REQUEST).build();
@@ -85,7 +85,7 @@ public class FacilityEndpoint {
     @Path("delete/{id}")
     public Response removeSportsFacility(@PathParam("id") String id) {
         try {
-            sportFacilityUseCase.removeSportsFacility(UUID.fromString(id));
+            sportFacilityServiceUseCase.removeSportsFacility(UUID.fromString(id));
             return Response.ok().build();
         } catch (RepositoryException e) {
             return Response.status(Response.Status.BAD_REQUEST).build();
@@ -95,10 +95,10 @@ public class FacilityEndpoint {
     @PUT
     @Path("update/football")
     @Consumes(MediaType.APPLICATION_JSON)
-    public Response updateFootballFacility(FootballFacilityRestDTO footballFacilityDTO) {
+    public Response updateFootballFacility(FootballFacilityDto footballFacilityDTO) {
         try {
-            SportsFacility sportsFacility = ViewFacilityRestConverter.convertFrom(footballFacilityDTO);
-            sportFacilityUseCase.updateSportsFacility(sportsFacility);
+            SportsFacility sportsFacility = ViewFacilityConverter.convertFrom(footballFacilityDTO);
+            sportFacilityServiceUseCase.updateSportsFacility(sportsFacility);
             return Response.ok().build();
         } catch (RepositoryConverterException | RepositoryException | ViewConverterException e) {
             return Response.status(Response.Status.BAD_REQUEST).build();
@@ -108,10 +108,10 @@ public class FacilityEndpoint {
     @PUT
     @Path("update/basketball")
     @Consumes(MediaType.APPLICATION_JSON)
-    public Response updateBasketballFacility(BasketballFacilityRestDTO basketballFacilityDTO) {
+    public Response updateBasketballFacility(BasketballFacilityDto basketballFacilityDTO) {
         try {
-            SportsFacility sportsFacility = ViewFacilityRestConverter.convertFrom(basketballFacilityDTO);
-            sportFacilityUseCase.updateSportsFacility(sportsFacility);
+            SportsFacility sportsFacility = ViewFacilityConverter.convertFrom(basketballFacilityDTO);
+            sportFacilityServiceUseCase.updateSportsFacility(sportsFacility);
             return Response.ok().build();
         } catch (RepositoryConverterException | RepositoryException | ViewConverterException e) {
             return Response.status(Response.Status.BAD_REQUEST).build();

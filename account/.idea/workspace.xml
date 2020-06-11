@@ -7,95 +7,87 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="28bf7cc8-64e0-43c3-9c70-b474a8cfb9bf" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/ApplicationPorts/src/main/java/ApplicationPorts/AccountServicePort.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ApplicationPorts/src/main/java/ApplicationPorts/AccountServiceUseCase.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Common/src/main/java/utils/Consts.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/QueueAdapter/Queue/src/main/java/Queue/BlockAccountReceiver.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/QueueAdapter/Queue/src/main/java/Queue/GetAccountReceiver.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/QueueAdapter/Queue/src/main/java/Queue/GetAllAccountsReceiver.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/QueueAdapter/Queue/src/main/java/Queue/RemoveAccountReceiver.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/QueueAdapter/Queue/src/main/java/Queue/Sender.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/QueueAdapter/Queue/src/main/java/Queue/UnblockAccountReceiver.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/QueueAdapter/Queue/src/main/java/Queue/UpdateAccountReceiver.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RepositoriesAdapters/RepositoryAdapter/src/main/java/RepositoryAdapter/RepositoryRoleConverter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../api-gateway/src/main/java/managers/AccountManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../api-gateway/src/main/java/utils/exception/EndpointException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../tks-docker/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/AppWar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/AppWar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ApplicationCore/ApplicationServices/src/main/java/pl/lapciakbilicki/ApplicationCore/ApplicationServices/AccountService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ApplicationCore/ApplicationServices/src/main/java/ApplicationServices/AccountService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ApplicationCore/ApplicationServices/src/main/java/pl/lapciakbilicki/ApplicationCore/ApplicationServices/ClientResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/ApplicationCore/ApplicationServices/src/main/java/ApplicationServices/ClientResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ApplicationCore/ApplicationServices/src/main/java/pl/lapciakbilicki/ApplicationCore/ApplicationServices/Sender.java" beforeDir="false" afterPath="$PROJECT_DIR$/ApplicationCore/ApplicationServices/src/main/java/ApplicationServices/Sender.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ApplicationCore/DomainModel/src/main/java/pl/lapciakbilicki/ApplicationCore/DomainModel/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/ApplicationCore/DomainModel/src/main/java/DomainModel/Account.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ApplicationCore/DomainModel/src/main/java/pl/lapciakbilicki/ApplicationCore/DomainModel/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/ApplicationCore/DomainModel/src/main/java/DomainModel/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ApplicationCore/DomainModel/src/main/java/pl/lapciakbilicki/ApplicationCore/DomainModel/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/ApplicationCore/DomainModel/src/main/java/DomainModel/Role.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ApplicationPorts/src/main/java/pl/lapciakbilicki/ApplicationPorts/Interfaces/Infrastructure/AddPort.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ApplicationPorts/src/main/java/pl/lapciakbilicki/ApplicationPorts/Interfaces/Infrastructure/FilterPort.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ApplicationPorts/src/main/java/pl/lapciakbilicki/ApplicationPorts/Interfaces/Infrastructure/GetPort.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ApplicationPorts/src/main/java/pl/lapciakbilicki/ApplicationPorts/Interfaces/Infrastructure/RemovePort.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ApplicationPorts/src/main/java/pl/lapciakbilicki/ApplicationPorts/Interfaces/Infrastructure/UpdatePort.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ApplicationPorts/src/main/java/pl/lapciakbilicki/ApplicationPorts/Interfaces/User/account/AddAccountUseCase.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ApplicationPorts/src/main/java/pl/lapciakbilicki/ApplicationPorts/Interfaces/User/account/BlockUserUseCase.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ApplicationPorts/src/main/java/pl/lapciakbilicki/ApplicationPorts/Interfaces/User/account/GetAccountUseCase.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ApplicationPorts/src/main/java/pl/lapciakbilicki/ApplicationPorts/Interfaces/User/account/RemoveAccountUseCase.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ApplicationPorts/src/main/java/pl/lapciakbilicki/ApplicationPorts/Interfaces/User/account/UnblockUserUseCase.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ApplicationPorts/src/main/java/pl/lapciakbilicki/ApplicationPorts/Interfaces/User/account/UpdateAccountUseCase.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Common/src/main/java/exception/AccountException.java" beforeDir="false" afterPath="$PROJECT_DIR$/Common/src/main/java/exceptions/AccountException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Common/src/main/java/exception/AccountNotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/Common/src/main/java/exceptions/AccountNotFoundException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Common/src/main/java/exception/RepositoryConverterException.java" beforeDir="false" afterPath="$PROJECT_DIR$/Common/src/main/java/exceptions/RepositoryConverterException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Common/src/main/java/exception/RepositoryException.java" beforeDir="false" afterPath="$PROJECT_DIR$/Common/src/main/java/exceptions/RepositoryException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Common/src/main/java/exception/ReservationError.java" beforeDir="false" afterPath="$PROJECT_DIR$/Common/src/main/java/exceptions/ReservationError.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Common/src/main/java/exception/ViewConverterException.java" beforeDir="false" afterPath="$PROJECT_DIR$/Common/src/main/java/exceptions/ViewConverterException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/QueueAdapter/Model/src/main/java/conventers/LocalDateTimeAdapter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/QueueAdapter/Model/src/main/java/conventers/ViewTwoWayConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/QueueAdapter/Model/src/main/java/Model/ViewTwoWayConverter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/QueueAdapter/Model/src/main/java/conventers/rest/ViewAccountRestConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/QueueAdapter/Model/src/main/java/Model/ViewAccountConverter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/QueueAdapter/Model/src/main/java/rest/AccountRestDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/QueueAdapter/Model/src/main/java/Model/AccountDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/QueueAdapter/Queue/src/main/java/receiver/AddAccountReceiver.java" beforeDir="false" afterPath="$PROJECT_DIR$/QueueAdapter/Queue/src/main/java/Queue/AddAccountReceiver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/QueueAdapter/Rest/src/main/java/AddAccountReceiver.java" beforeDir="false" afterPath="$PROJECT_DIR$/QueueAdapter/Rest/src/main/java/AddAccountReceiver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/QueueAdapter/Rest/src/main/java/ApplicationRestConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/QueueAdapter/Rest/src/main/java/ApplicationRestConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/QueueAdapter/Rest/src/main/java/endpoints/AccountEndpoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/QueueAdapter/Rest/src/main/java/Endpoints/AccountEndpoint.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../client/QueueAdapter/Queue/src/main/java/Queue/Sender.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../client/QueueAdapter/Queue/src/main/java/SportsFacility/AddBasketballReceiver.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../client/QueueAdapter/Queue/src/main/java/SportsFacility/AddFootballReceiver.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../client/QueueAdapter/Queue/src/main/java/SportsFacility/GetAllReceiver.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../client/QueueAdapter/Queue/src/main/java/SportsFacility/GetReceiver.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../client/QueueAdapter/Queue/src/main/java/SportsFacility/RemoveReceiver.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../client/QueueAdapter/Queue/src/main/java/SportsFacility/UpdateBasketballReceiver.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../client/QueueAdapter/Queue/src/main/java/SportsFacility/UpdateFootballReceiver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ApplicationCore/ApplicationServices/src/main/java/ApplicationServices/AccountService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ApplicationCore/ApplicationServices/src/main/java/ApplicationServices/AccountService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ApplicationPorts/src/main/java/ApplicationPorts/AccountServicePort.java" beforeDir="false" afterPath="$PROJECT_DIR$/ApplicationPorts/src/main/java/ApplicationPorts/AccountPort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/src/main/java/exceptions/RepositoryException.java" beforeDir="false" afterPath="$PROJECT_DIR$/Common/src/main/java/exceptions/RepositoryException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/QueueAdapter/Model/src/main/java/Model/AccountDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/QueueAdapter/Model/src/main/java/Model/AccountDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/QueueAdapter/Model/src/main/java/Model/ViewAccountConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/QueueAdapter/Model/src/main/java/Model/ViewAccountConverter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/QueueAdapter/Queue/src/main/java/Queue/AddAccountReceiver.java" beforeDir="false" afterPath="$PROJECT_DIR$/QueueAdapter/Queue/src/main/java/Queue/AddAccountReceiver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/QueueAdapter/Queue/src/main/java/Queue/UpdateAccountReceiver.java" beforeDir="false" afterPath="$PROJECT_DIR$/QueueAdapter/Queue/src/main/java/Queue/UpdateAccountReceiver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/QueueAdapter/Rest/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QueueAdapter/Rest/src/main/java/AddAccountReceiver.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QueueAdapter/Rest/src/main/java/ApplicationRestConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QueueAdapter/Rest/src/main/java/Endpoints/AccountEndpoint.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QueueAdapter/Rest/src/test/java/AbstractContainerBase.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/QueueAdapter/Rest/src/test/java/AccountServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/QueueAdapter/Rest/src/test/java/AccountServiceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/QueueAdapter/web/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/QueueAdapter/web/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RepositoriesAdapters/DataModel/src/main/java/pl/lapciakbilicki/DataModel/Entity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/RepositoriesAdapters/DataModel/src/main/java/pl/lapciakbilicki/DataModel/IsIdentified.java" beforeDir="false" afterPath="$PROJECT_DIR$/RepositoriesAdapters/DataModel/src/main/java/DataModel/IsIdentified.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RepositoriesAdapters/DataModel/src/main/java/pl/lapciakbilicki/DataModel/Role/RoleEnt.java" beforeDir="false" afterPath="$PROJECT_DIR$/RepositoriesAdapters/DataModel/src/main/java/DataModel/RoleEnt.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RepositoriesAdapters/DataModel/src/main/java/pl/lapciakbilicki/DataModel/account/AccountEnt.java" beforeDir="false" afterPath="$PROJECT_DIR$/RepositoriesAdapters/DataModel/src/main/java/DataModel/AccountEnt.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RepositoriesAdapters/Repository/src/main/java/pl/lapciakbilicki/RepositoriesAdapter/Repository/filler/AccountFiller.java" beforeDir="false" afterPath="$PROJECT_DIR$/RepositoriesAdapters/Repository/src/main/java/Repository/AccountFiller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RepositoriesAdapters/Repository/src/main/java/pl/lapciakbilicki/RepositoriesAdapter/Repository/filler/Filler.java" beforeDir="false" afterPath="$PROJECT_DIR$/RepositoriesAdapters/Repository/src/main/java/Repository/Filler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RepositoriesAdapters/Repository/src/main/java/pl/lapciakbilicki/RepositoriesAdapter/Repository/filler/RoleFiller.java" beforeDir="false" afterPath="$PROJECT_DIR$/RepositoriesAdapters/Repository/src/main/java/Repository/RoleFiller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RepositoriesAdapters/Repository/src/main/java/pl/lapciakbilicki/RepositoriesAdapter/Repository/repository/AbstractRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/RepositoriesAdapters/Repository/src/main/java/Repository/AbstractRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RepositoriesAdapters/Repository/src/main/java/pl/lapciakbilicki/RepositoriesAdapter/Repository/repository/AccountRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/RepositoriesAdapters/Repository/src/main/java/Repository/AccountRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RepositoriesAdapters/Repository/src/main/java/pl/lapciakbilicki/RepositoriesAdapter/Repository/repository/Repository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/RepositoriesAdapters/Repository/src/main/java/pl/lapciakbilicki/RepositoriesAdapter/Repository/repository/RoleRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/RepositoriesAdapters/Repository/src/main/java/Repository/RoleRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RepositoriesAdapters/RepositoryAdapter/src/main/java/pl/lapciakbilicki/RepositoryAdapter/adapter/RepositoryAccountAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/RepositoriesAdapters/RepositoryAdapter/src/main/java/RepositoryAdapter/RepositoryAccountAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RepositoriesAdapters/RepositoryAdapter/src/main/java/pl/lapciakbilicki/RepositoryAdapter/conventer/RepositoryAccountConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/RepositoriesAdapters/RepositoryAdapter/src/main/java/RepositoryAdapter/RepositoryAccountConverter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RepositoriesAdapters/RepositoryAdapter/src/main/java/pl/lapciakbilicki/RepositoryAdapter/conventer/RepositoryConverter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/RepositoriesAdapters/RepositoryAdapter/src/main/java/pl/lapciakbilicki/RepositoryAdapter/conventer/RepositoryReconverter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/RepositoriesAdapters/RepositoryAdapter/src/main/java/pl/lapciakbilicki/RepositoryAdapter/conventer/RepositoryRoleConverter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/RepositoriesAdapters/RepositoryAdapter/src/main/java/pl/lapciakbilicki/RepositoryAdapter/conventer/RepositoryTwoWayConverter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../api-gateway/.idea/artifacts/AppWar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../api-gateway/.idea/artifacts/AppWar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../api-gateway/out/artifacts/AppWar/AppWar.war" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../api-gateway/src/main/java/ApplicationRestConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../api-gateway/src/main/java/ApplicationRestConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RepositoriesAdapters/Repository/src/main/java/Repository/AbstractRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/RepositoriesAdapters/Repository/src/main/java/Repository/AbstractRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RepositoriesAdapters/Repository/src/main/java/Repository/AccountRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/RepositoriesAdapters/Repository/src/main/java/Repository/AccountRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RepositoriesAdapters/Repository/src/main/java/Repository/RoleRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/RepositoriesAdapters/Repository/src/main/java/Repository/RoleRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RepositoriesAdapters/RepositoryAdapter/src/main/java/RepositoryAdapter/RepositoryAccountAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/RepositoriesAdapters/RepositoryAdapter/src/main/java/RepositoryAdapter/RepositoryAccountAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api-gateway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../api-gateway/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api-gateway/src/main/java/dto/AccountDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/../api-gateway/src/main/java/dto/AccountDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api-gateway/src/main/java/dto/BasketballFacilityDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/../api-gateway/src/main/java/dto/BasketballFacilityDto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../api-gateway/src/main/java/dto/ClientDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/../api-gateway/src/main/java/dto/ClientDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api-gateway/src/main/java/dto/FootballFacilityDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/../api-gateway/src/main/java/dto/FootballFacilityDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api-gateway/src/main/java/dto/SportsFacilityDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/../api-gateway/src/main/java/dto/SportsFacilityDto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../api-gateway/src/main/java/endpoints/AccountEndpoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/../api-gateway/src/main/java/endpoints/AccountEndpoint.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../api-gateway/src/main/java/endpoints/ClientEndpoint.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../api-gateway/src/main/java/queue/Receiver.java" beforeDir="false" afterPath="$PROJECT_DIR$/../api-gateway/src/main/java/queue/Receiver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api-gateway/src/main/java/endpoints/FacilityEndpoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/../api-gateway/src/main/java/endpoints/FacilityEndpoint.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api-gateway/src/main/java/queue/Sender.java" beforeDir="false" afterPath="$PROJECT_DIR$/../api-gateway/src/main/java/queue/Sender.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../api-gateway/src/main/java/utils/Consts.java" beforeDir="false" afterPath="$PROJECT_DIR$/../api-gateway/src/main/java/utils/Consts.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../api-gateway/target/api-gateway-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../api-gateway/target/api-gateway-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../api-gateway/target/classes/ApplicationRestConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/../api-gateway/target/classes/ApplicationRestConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../api-gateway/target/classes/dto/ClientDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/../api-gateway/target/classes/dto/ClientDto.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../api-gateway/target/classes/endpoints/AccountEndpoint.class" beforeDir="false" afterPath="$PROJECT_DIR$/../api-gateway/target/classes/endpoints/AccountEndpoint.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../api-gateway/target/classes/endpoints/ClientEndpoint.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../api-gateway/target/classes/queue/Receiver.class" beforeDir="false" afterPath="$PROJECT_DIR$/../api-gateway/target/classes/queue/Receiver.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../api-gateway/target/classes/utils/Consts.class" beforeDir="false" afterPath="$PROJECT_DIR$/../api-gateway/target/classes/utils/Consts.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../api-gateway/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../api-gateway/target/maven-archiver/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../api-gateway/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/../api-gateway/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../api-gateway/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/../api-gateway/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/.idea/artifacts/AppWar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../client/.idea/artifacts/AppWar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../tks-docker/api-gateway-service/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/../tks-docker/api-gateway-service/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../tks-docker/api-gateway-service/war/AppWar.war" beforeDir="false" afterPath="$PROJECT_DIR$/../tks-docker/api-gateway-service/war/AppWar.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../tks-docker/service1-account/war/AppWar.war" beforeDir="false" afterPath="$PROJECT_DIR$/../tks-docker/service1-account/war/AppWar.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../tks-docker/service2-client/war/AppWar.war" beforeDir="false" afterPath="$PROJECT_DIR$/../tks-docker/service2-client/war/AppWar.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../client/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../client/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/ApplicationCore/ApplicationCore.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../client/ApplicationCore/ApplicationCore.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/ApplicationCore/ApplicationServices/ApplicationServices.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../client/ApplicationCore/ApplicationServices/ApplicationServices.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/ApplicationCore/ApplicationServices/src/main/java/ApplicationServices/ClientService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../client/ApplicationCore/ApplicationServices/src/main/java/ApplicationServices/ClientService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/ApplicationCore/ApplicationServices/src/main/java/ApplicationServices/FacilityService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../client/ApplicationCore/ApplicationServices/src/main/java/ApplicationServices/FacilityService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/ApplicationCore/ApplicationServices/src/main/java/ApplicationServices/ReservationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../client/ApplicationCore/ApplicationServices/src/main/java/ApplicationServices/ReservationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/ApplicationCore/DomainModel/DomainModel.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../client/ApplicationCore/DomainModel/DomainModel.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/ApplicationPorts/ApplicationPorts.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../client/ApplicationPorts/ApplicationPorts.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/ApplicationPorts/src/main/java/ApplicationPorts/Infrastructure/ClientServicePort.java" beforeDir="false" afterPath="$PROJECT_DIR$/../client/ApplicationPorts/src/main/java/ApplicationPorts/Infrastructure/ClientPort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/ApplicationPorts/src/main/java/ApplicationPorts/Infrastructure/FacilityServicePort.java" beforeDir="false" afterPath="$PROJECT_DIR$/../client/ApplicationPorts/src/main/java/ApplicationPorts/Infrastructure/FacilityPort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/ApplicationPorts/src/main/java/ApplicationPorts/Infrastructure/ReservationServicePort.java" beforeDir="false" afterPath="$PROJECT_DIR$/../client/ApplicationPorts/src/main/java/ApplicationPorts/Infrastructure/ReservationPort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/ApplicationPorts/src/main/java/ApplicationPorts/User/ClientUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/../client/ApplicationPorts/src/main/java/ApplicationPorts/User/ClientServiceUseCase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/ApplicationPorts/src/main/java/ApplicationPorts/User/ReservationUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/../client/ApplicationPorts/src/main/java/ApplicationPorts/User/ReservationServiceUseCase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/ApplicationPorts/src/main/java/ApplicationPorts/User/SportFacilityUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/../client/ApplicationPorts/src/main/java/ApplicationPorts/User/SportFacilityServiceUseCase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/Common/src/main/java/utils/Consts.java" beforeDir="false" afterPath="$PROJECT_DIR$/../client/Common/src/main/java/utils/Consts.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/QueueAdapter/Model/Model.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../client/QueueAdapter/Model/Model.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/QueueAdapter/Model/src/main/java/Model/ViewClientRestConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../client/QueueAdapter/Model/src/main/java/Model/ViewClientRestConverter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/QueueAdapter/Model/src/main/java/Model/ViewFacilityRestConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../client/QueueAdapter/Model/src/main/java/Model/ViewFacilityConverter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/QueueAdapter/Model/src/main/java/Model/ViewReservationRestConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../client/QueueAdapter/Model/src/main/java/Model/ViewReservationRestConverter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/QueueAdapter/Model/src/main/java/Model/dto/BasketballFacilityRestDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../client/QueueAdapter/Model/src/main/java/Model/dto/BasketballFacilityDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/QueueAdapter/Model/src/main/java/Model/dto/ClientRestDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../client/QueueAdapter/Model/src/main/java/Model/dto/ClientDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/QueueAdapter/Model/src/main/java/Model/dto/FieldRestDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../client/QueueAdapter/Model/src/main/java/Model/dto/FieldDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/QueueAdapter/Model/src/main/java/Model/dto/FootballFacilityRestDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../client/QueueAdapter/Model/src/main/java/Model/dto/FootballFacilityDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/QueueAdapter/Model/src/main/java/Model/dto/ReservationDetailsRestDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../client/QueueAdapter/Model/src/main/java/Model/dto/ReservationDetailsDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/QueueAdapter/Model/src/main/java/Model/dto/ReservationRestDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../client/QueueAdapter/Model/src/main/java/Model/dto/ReservationDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/QueueAdapter/Model/src/main/java/Model/dto/SportsFacilityRestDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../client/QueueAdapter/Model/src/main/java/Model/dto/SportsFacilityDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/QueueAdapter/Queue/Queue.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../client/QueueAdapter/Queue/Queue.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/QueueAdapter/Queue/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../client/QueueAdapter/Queue/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/QueueAdapter/QueueAdapter.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../client/QueueAdapter/QueueAdapter.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/QueueAdapter/Rest/Rest.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../client/QueueAdapter/Rest/Rest.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/QueueAdapter/Rest/src/main/java/endpoints/ClientEndpoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/../client/QueueAdapter/Rest/src/main/java/endpoints/ClientEndpoint.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/QueueAdapter/Rest/src/main/java/endpoints/FacilityEndpoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/../client/QueueAdapter/Rest/src/main/java/endpoints/FacilityEndpoint.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/QueueAdapter/Rest/src/main/java/endpoints/ReservationEndpoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/../client/QueueAdapter/Rest/src/main/java/endpoints/ReservationEndpoint.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/QueueAdapter/Rest/src/test/java/ClientServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../client/QueueAdapter/Rest/src/test/java/ClientServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/QueueAdapter/Rest/src/test/java/ReservationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../client/QueueAdapter/Rest/src/test/java/ReservationTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/QueueAdapter/Rest/src/test/java/SportsFacilityTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../client/QueueAdapter/Rest/src/test/java/SportsFacilityTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/RepositoriesAdapters/DataModel/DataModel.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../client/RepositoriesAdapters/DataModel/DataModel.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/RepositoriesAdapters/RepositoriesAdapters.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../client/RepositoriesAdapters/RepositoriesAdapters.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/RepositoriesAdapters/Repository/Repository.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../client/RepositoriesAdapters/Repository/Repository.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/RepositoriesAdapters/Repository/src/main/java/Repository/AbstractRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../client/RepositoriesAdapters/Repository/src/main/java/Repository/AbstractRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/RepositoriesAdapters/RepositoryAdapter/RepositoryAdapter.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../client/RepositoriesAdapters/RepositoryAdapter/RepositoryAdapter.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/RepositoriesAdapters/RepositoryAdapter/src/main/java/RepositoryAdapter/adapter/RepositoryClientAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../client/RepositoriesAdapters/RepositoryAdapter/src/main/java/RepositoryAdapter/adapter/RepositoryClientAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/RepositoriesAdapters/RepositoryAdapter/src/main/java/RepositoryAdapter/adapter/RepositoryFacilityAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../client/RepositoriesAdapters/RepositoryAdapter/src/main/java/RepositoryAdapter/adapter/RepositoryFacilityAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/RepositoriesAdapters/RepositoryAdapter/src/main/java/RepositoryAdapter/adapter/RepositoryReservationAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../client/RepositoriesAdapters/RepositoryAdapter/src/main/java/RepositoryAdapter/adapter/RepositoryReservationAdapter.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -515,6 +507,8 @@
       <workItem from="1591804973161" duration="1091000" />
       <workItem from="1591806280923" duration="642000" />
       <workItem from="1591863355768" duration="2203000" />
+      <workItem from="1591868191303" duration="8867000" />
+      <workItem from="1591892760136" duration="5190000" />
     </task>
     <servers />
   </component>
@@ -593,11 +587,11 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="684" y="405" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages/0.0.1920.1050/-1920.0.1536.834@0.0.1920.1050" timestamp="1586992917911" />
-    <state x="592" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1591265924744">
+    <state x="592" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1591872400053">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="592" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1050/-1920.0.1536.834@0.0.1920.1050" timestamp="1587068527060" />
-    <state x="592" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1050/1920.0.1536.834@0.0.1920.1050" timestamp="1591265924744" />
+    <state x="592" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1050/1920.0.1536.834@0.0.1920.1050" timestamp="1591872400053" />
     <state x="690" y="272" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1591262846381">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
@@ -724,11 +718,11 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="499" height="468" key="SwitcherDM/0.0.1920.1050/1920.0.1536.834@0.0.1920.1050" timestamp="1591222760971" />
-    <state x="655" y="349" key="com.intellij.ide.util.TipDialog" timestamp="1591177960842">
+    <state x="655" y="349" key="com.intellij.ide.util.TipDialog" timestamp="1591893362054">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="655" y="349" key="com.intellij.ide.util.TipDialog/0.0.1920.1050/-1920.0.1536.834@0.0.1920.1050" timestamp="1587380670288" />
-    <state x="655" y="349" key="com.intellij.ide.util.TipDialog/0.0.1920.1050/1920.0.1536.834@0.0.1920.1050" timestamp="1591177960842" />
+    <state x="655" y="349" key="com.intellij.ide.util.TipDialog/0.0.1920.1050/1920.0.1536.834@0.0.1920.1050" timestamp="1591893362054" />
     <state x="655" y="349" key="com.intellij.ide.util.TipDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1585410398579" />
     <state x="664" y="418" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1590753723725">
       <screen x="0" y="0" width="1920" height="1050" />

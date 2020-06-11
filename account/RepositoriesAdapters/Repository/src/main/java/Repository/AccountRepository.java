@@ -37,7 +37,7 @@ public class AccountRepository extends AbstractRepository<AccountEnt> implements
             accountToUpdate.setPassword(item.getPassword());
             accountToUpdate.setRoles(item.getRoles());
         } else {
-            throw new RepositoryException("Operation 'update(item)' in " + this.getClass().getSimpleName() + " failed!");
+            throw new RepositoryException();
         }
     }
 

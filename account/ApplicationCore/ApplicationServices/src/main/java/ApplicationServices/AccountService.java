@@ -1,6 +1,6 @@
 package ApplicationServices;
 
-import ApplicationPorts.AccountServicePort;
+import ApplicationPorts.AccountPort;
 import ApplicationPorts.AccountServiceUseCase;
 import DomainModel.Account;
 import exceptions.RepositoryConverterException;
@@ -16,43 +16,43 @@ import java.util.function.Predicate;
 public class AccountService implements AccountServiceUseCase {
 
     @Inject
-    private AccountServicePort accountServicePort;
+    private AccountPort accountPort;
 
     public AccountService() {
     }
 
     @Override
     public Account getAccount(UUID id) throws RepositoryConverterException {
-        return accountServicePort.getAccount(id);
+        return accountPort.getAccount(id);
     }
 
     @Override
     public List<Account> getAllAccount() throws RepositoryConverterException {
-        return accountServicePort.getAllAccounts();
+        return accountPort.getAllAccounts();
     }
 
     @Override
     public void removeAccount(Account account) throws RepositoryException {
-        accountServicePort.removeAccount(account);
+        accountPort.removeAccount(account);
     }
 
     @Override
     public void removeAccount(UUID id) throws RepositoryException {
-        accountServicePort.removeAccount(id);
+        accountPort.removeAccount(id);
     }
 
     @Override
     public void updateAccount(Account account) throws RepositoryException {
-            accountServicePort.updateAccount(account);
+            accountPort.updateAccount(account);
     }
 
     public List<Account> filterAccount(Predicate<Account> predicate) throws RepositoryConverterException {
-        return accountServicePort.getFilteredAccount(predicate);
+        return accountPort.getFilteredAccount(predicate);
     }
 
     @Override
     public void addAccount(Account account) throws RepositoryConverterException, RepositoryException {
-            accountServicePort.addAccount(account);
+            accountPort.addAccount(account);
     }
 
     @Override

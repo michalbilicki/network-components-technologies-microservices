@@ -1,11 +1,7 @@
 package Queue;
 
-import ApplicationPorts.AccountServiceUseCase;
-import DomainModel.Account;
-import Model.AccountDto;
-import Model.ViewAccountConverter;
+import ApplicationPorts.User.SportFacilityServiceUseCase;
 import com.rabbitmq.client.*;
-import exceptions.RepositoryConverterException;
 import exceptions.RepositoryException;
 import utils.Consts;
 
@@ -19,14 +15,15 @@ import javax.json.bind.Jsonb;
 import javax.json.bind.JsonbBuilder;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
+import java.util.UUID;
 import java.util.concurrent.TimeoutException;
 
 @Singleton
 @Startup
-public class UpdateAccountReceiver {
+public class RemoveReceiver {
 
     @Inject
-    private AccountServiceUseCase accountServiceUseCase;
+    private SportFacilityServiceUseCase sportFacilityServiceUseCase;
 
     public void init(@Observes @Initialized(ApplicationScoped.class) Object init) {
 
@@ -36,26 +33,23 @@ public class UpdateAccountReceiver {
             Connection connection = factory.newConnection();
             Channel channel = connection.createChannel();
 
-            channel.queueDeclare(Consts.UPDATE_ACCOUNT_QUEUE, false, false, false, null);
-            channel.basicConsume(Consts.UPDATE_ACCOUNT_QUEUE, new DefaultConsumer(channel) {
+            channel.queueDeclare(Consts.REMOVE_FACILITY_QUEUE, false, false, false, null);
+            channel.basicConsume(Consts.REMOVE_FACILITY_QUEUE, new DefaultConsumer(channel) {
 
                 @Override
                 public void handleDelivery(String s, Envelope envelope, AMQP.BasicProperties basicProperties, byte[] bytes) {
                     Jsonb jsonb = JsonbBuilder.create();
                     String message = new String(bytes, StandardCharsets.UTF_8);
 
-                    AccountDto accountDto = jsonb.fromJson(message, AccountDto.class);
-                    System.out.println("[ RECEIVE ] ACCOUNT - update account - " + accountDto.toString());
+                    String id = jsonb.fromJson(message, String.class);
+                    System.out.println("[ RECEIVE ] CLIENT - remove facility - " + id);
 
-                    ViewAccountConverter viewAccountConverter = new ViewAccountConverter();
-                    Account account = viewAccountConverter.convertFrom(accountDto);
-
-                    Sender sender = new Sender(Consts.UPDATE_ACCOUNT_QUEUE);
+                    Sender sender = new Sender(Consts.REMOVE_FACILITY_QUEUE);
                     try {
-                        accountServiceUseCase.updateAccount(account);
-                        sender.send(Boolean.toString(true), accountDto.getId());
+                        sportFacilityServiceUseCase.removeSportsFacility(UUID.fromString(id));
+                        sender.send(Boolean.toString(true), id);
                     } catch (RepositoryException e) {
-                        sender.send(Boolean.toString(false), accountDto.getId());
+                        sender.send(Boolean.toString(false), id);
                     }
 
                 }

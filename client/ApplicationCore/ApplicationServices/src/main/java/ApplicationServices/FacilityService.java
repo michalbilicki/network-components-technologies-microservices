@@ -1,7 +1,7 @@
 package ApplicationServices;
 
-import ApplicationPorts.Infrastructure.FacilityServicePort;
-import ApplicationPorts.User.SportFacilityUseCase;
+import ApplicationPorts.Infrastructure.FacilityPort;
+import ApplicationPorts.User.SportFacilityServiceUseCase;
 import DomainModel.Reservation;
 import DomainModel.SportsFacility;
 import exceptions.RepositoryConverterException;
@@ -14,13 +14,13 @@ import java.util.List;
 import java.util.UUID;
 
 @ApplicationScoped
-public class FacilityService implements SportFacilityUseCase {
+public class FacilityService implements SportFacilityServiceUseCase {
 
     @Inject
     private ReservationService reservationService;
 
     @Inject
-    private FacilityServicePort facilityServicePort;
+    private FacilityPort facilityPort;
 
     public FacilityService() {
 
@@ -28,23 +28,23 @@ public class FacilityService implements SportFacilityUseCase {
 
     @Override
     public void addSportsFacility(SportsFacility sportsFacility) throws RepositoryConverterException, RepositoryException {
-        facilityServicePort.add(sportsFacility);
+        facilityPort.add(sportsFacility);
     }
 
     @Override
     public SportsFacility getSportsFacility(UUID id) throws RepositoryConverterException, RepositoryException {
-        return facilityServicePort.get(id);
+        return facilityPort.get(id);
     }
 
     @Override
     public List<SportsFacility> getAllSportsFacilities() throws RepositoryConverterException {
-        return facilityServicePort.getAll();
+        return facilityPort.getAll();
     }
 
 
     @Override
     public void removeSportsFacility(UUID id) throws RepositoryException {
-        facilityServicePort.remove(id);
+        facilityPort.remove(id);
     }
 
     @Override
@@ -67,6 +67,6 @@ public class FacilityService implements SportFacilityUseCase {
 
     @Override
     public void updateSportsFacility(SportsFacility sportsFacility) throws RepositoryConverterException, RepositoryException {
-        facilityServicePort.update(sportsFacility);
+        facilityPort.update(sportsFacility);
     }
 }

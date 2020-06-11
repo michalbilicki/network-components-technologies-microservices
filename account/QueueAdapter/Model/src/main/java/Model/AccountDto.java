@@ -27,7 +27,7 @@ public class AccountDto implements Serializable {
 
     private List<String> roles = new ArrayList<>();
 
-    private String corrId;
+//    private String corrId;
 
     public List<String> getRoles() {
         return roles;

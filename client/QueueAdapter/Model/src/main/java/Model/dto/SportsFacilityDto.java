@@ -7,25 +7,24 @@ import java.io.Serializable;
 
 @Data
 @JsonbNillable
-public abstract class SportsFacilityRestDTO implements Serializable {
+public class SportsFacilityDto implements Serializable {
 
     private String id;
     private double pricePerHours;
     private boolean access;
-    private FieldRestDTO field;
+    private FieldDto field;
     private String name;
     private String sportsFacilityType = this.getClass().getSimpleName();
-    
-    public SportsFacilityRestDTO() {
+
+    public SportsFacilityDto() {
 
     }
 
-    public SportsFacilityRestDTO(String id, double pricePerHours, boolean access, FieldRestDTO field, String name, String type) {
+    public SportsFacilityDto(String id, double pricePerHours, boolean access, FieldDto field, String name) {
         this.id = id;
         this.pricePerHours = pricePerHours;
         this.access = access;
         this.field = field;
         this.name = name;
     }
-
 }

@@ -30,15 +30,10 @@ public abstract class AbstractRepository<T extends IsIdentified> {
     }
 
     public T get(String id) throws RepositoryException {
-        T result = this.listOfItems.stream()
+        return this.listOfItems.stream()
                 .filter(item -> item.getId().equals(id))
                 .findAny()
                 .orElse(null);
-        if (result != null) {
-            return result;
-        } else {
-            throw new RepositoryException();
-        }
     }
 
     public List<T> getAll() {

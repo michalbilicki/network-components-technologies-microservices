@@ -1,12 +1,12 @@
 package Model;
 
 import DomainModel.Reservation;
-import Model.dto.ReservationRestDTO;
+import Model.dto.ReservationDto;
 
 public class ViewReservationRestConverter {
 
-    public static ReservationRestDTO convertTo(Reservation arg) {
-        return new ReservationRestDTO(
+    public static ReservationDto convertTo(Reservation arg) {
+        return new ReservationDto(
                 arg.getId(),
                 arg.getClientId(),
                 arg.getSportsFacilityId(),
@@ -16,7 +16,7 @@ public class ViewReservationRestConverter {
         );
     }
 
-    public static Reservation convertFrom(ReservationRestDTO arg) {
+    public static Reservation convertFrom(ReservationDto arg) {
         return new Reservation(
                 arg.getId(),
                 arg.getClientId(),

@@ -1,8 +1,8 @@
 package ApplicationServices;
 
-import ApplicationPorts.Infrastructure.ClientServicePort;
-import ApplicationPorts.Infrastructure.ReservationServicePort;
-import ApplicationPorts.User.ReservationUseCase;
+import ApplicationPorts.Infrastructure.ClientPort;
+import ApplicationPorts.Infrastructure.ReservationPort;
+import ApplicationPorts.User.ReservationServiceUseCase;
 import DomainModel.Client;
 import DomainModel.Reservation;
 import DomainModel.SportsFacility;
@@ -16,22 +16,22 @@ import java.util.UUID;
 import java.util.stream.Collectors;
 
 @ApplicationScoped
-public class ReservationService implements ReservationUseCase {
+public class ReservationService implements ReservationServiceUseCase {
 
     @Inject
-    private ReservationServicePort reservationServicePort;
+    private ReservationPort reservationPort;
 
     @Inject
-    private ClientServicePort clientServicePort;
+    private ClientPort clientPort;
 
     @Override
     public List<Reservation> getUserReservations(Client client) {
-        return reservationServicePort.getFiltered(reservation -> reservation.getClientId().equals(client.getId()));
+        return reservationPort.getFiltered(reservation -> reservation.getClientId().equals(client.getId()));
     }
 
     @Override
     public List<Reservation> getSportsFacilityReservations(SportsFacility sportsFacility) {
-        List<Reservation> reservations = reservationServicePort.getAll();
+        List<Reservation> reservations = reservationPort.getAll();
         return reservations.stream()
                 .filter(reservation -> reservation.getSportsFacilityId().equals(sportsFacility.getId().toString()))
                 .collect(Collectors.toList());
@@ -39,17 +39,17 @@ public class ReservationService implements ReservationUseCase {
 
     @Override
     public void removeReservation(UUID id) throws RepositoryException {
-        reservationServicePort.remove(id);
+        reservationPort.remove(id);
     }
 
     @Override
     public void cancelReservation(UUID clientId, UUID reservationId) throws ReservationError, RepositoryException {
         boolean exceptionFlag = true;
-        Client client = clientServicePort.get(clientId);
+        Client client = clientPort.get(clientId);
         List<Reservation> clientReservation = getUserReservations(client);
         for (Reservation reservation : clientReservation) {
             if (reservation.getId().equals(reservationId.toString())) {
-                reservationServicePort.deactivateReservation(reservation);
+                reservationPort.deactivateReservation(reservation);
                 exceptionFlag = false;
             }
         }
@@ -59,11 +59,11 @@ public class ReservationService implements ReservationUseCase {
 
     @Override
     public Reservation getReservation(UUID id) throws RepositoryException {
-        return reservationServicePort.get(id);
+        return reservationPort.get(id);
     }
 
     @Override
     public List<Reservation> getAll() {
-        return reservationServicePort.getAll();
+        return reservationPort.getAll();
     }
 }

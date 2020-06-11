@@ -20,7 +20,7 @@ import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
 @ApplicationScoped
-public class RepositoryReservationAdapter implements ReservationServicePort {
+public class RepositoryReservationAdapter implements ReservationPort {
 
     @Inject
     private ReservationRepository reservationRepository;

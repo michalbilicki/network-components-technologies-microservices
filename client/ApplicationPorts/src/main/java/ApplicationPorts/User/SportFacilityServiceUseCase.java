@@ -8,7 +8,7 @@ import java.time.LocalDateTime;
 import java.util.List;
 import java.util.UUID;
 
-public interface SportFacilityUseCase {
+public interface SportFacilityServiceUseCase {
 
     void addSportsFacility(SportsFacility sportsFacility) throws RepositoryConverterException, RepositoryException;
 

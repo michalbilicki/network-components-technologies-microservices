@@ -1,6 +1,6 @@
 package RepositoryAdapter.adapter;
 
-import ApplicationPorts.Infrastructure.ClientServicePort;
+import ApplicationPorts.Infrastructure.ClientPort;
 import DomainModel.Client;
 import DataModel.ClientEnt;
 import Repository.ClientRepository;
@@ -16,7 +16,7 @@ import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
 @ApplicationScoped
-public class RepositoryClientAdapter implements ClientServicePort {
+public class RepositoryClientAdapter implements ClientPort {
 
     @Inject
     private ClientRepository clientRepository;

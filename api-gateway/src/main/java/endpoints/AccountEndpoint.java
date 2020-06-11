@@ -25,8 +25,10 @@ public class AccountEndpoint {
     public Response addAccount(AccountDto accountDto) {
         try {
             boolean result;
-            String corrId = UUID.randomUUID().toString();
-            accountDto.setCorrId(corrId);
+//            String corrId = UUID.randomUUID().toString();
+//            accountDto.setCorrId(corrId);
+
+            String corrId = accountDto.getId();
 
             Sender<AccountDto> accountSender = new Sender<AccountDto>(Consts.ADD_ACCOUNT_QUEUE);
             accountSender.send(accountDto, corrId);
@@ -78,8 +80,7 @@ public class AccountEndpoint {
     @Path("update")
     @Consumes({MediaType.APPLICATION_JSON})
     public Response updateAccount(AccountDto accountDto) {
-        String corrId = UUID.randomUUID().toString();
-        accountDto.setCorrId(corrId);
+        String corrId = accountDto.getId();
 
         Sender<AccountDto> sender = new Sender<AccountDto>(Consts.UPDATE_ACCOUNT_QUEUE);
         sender.send(accountDto, corrId);

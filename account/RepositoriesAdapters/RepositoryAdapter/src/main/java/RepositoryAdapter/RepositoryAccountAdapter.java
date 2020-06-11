@@ -3,7 +3,7 @@ package RepositoryAdapter;
 import exceptions.RepositoryException;
 import DomainModel.Account;
 import DomainModel.Role;
-import ApplicationPorts.AccountServicePort;
+import ApplicationPorts.AccountPort;
 import DataModel.RoleEnt;
 import DataModel.AccountEnt;
 import Repository.AccountRepository;
@@ -22,7 +22,7 @@ import java.util.stream.Collectors;
 @Named("RepositoryAccountAdapter")
 @ApplicationScoped
 public class RepositoryAccountAdapter
-        implements AccountServicePort {
+        implements AccountPort {
 
     @Inject
     private AccountRepository accountRepository;

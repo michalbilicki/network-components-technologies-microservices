@@ -13,7 +13,7 @@ import java.io.Serializable;
 @XmlRootElement(name = "Client")
 @XmlType(namespace = "http://lapciakbilicki.pl/clients", name = "client", propOrder = {})
 @XmlAccessorType(XmlAccessType.FIELD)
-public class ClientRestDTO implements Serializable {
+public class ClientDto implements Serializable {
 
     @XmlAttribute
     private String id;

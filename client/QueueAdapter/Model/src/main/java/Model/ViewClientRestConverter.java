@@ -1,12 +1,12 @@
 package Model;
 
 import DomainModel.Client;
-import Model.dto.ClientRestDTO;
+import Model.dto.ClientDto;
 
 public class ViewClientRestConverter {
 
-    public static ClientRestDTO convertTo(Client arg) {
-        return new ClientRestDTO(
+    public static ClientDto convertTo(Client arg) {
+        return new ClientDto(
                 arg.getId(),
                 arg.getLogin(),
                 arg.getName() + " " + arg.getSurname(),
@@ -14,7 +14,7 @@ public class ViewClientRestConverter {
         );
     }
 
-    public static Client convertFrom(ClientRestDTO arg) {
+    public static Client convertFrom(ClientDto arg) {
         return new Client(
                 arg.getId(),
                 arg.getLogin(),

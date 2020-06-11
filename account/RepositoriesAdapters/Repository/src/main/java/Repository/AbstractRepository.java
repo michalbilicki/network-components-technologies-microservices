@@ -18,15 +18,15 @@ public abstract class AbstractRepository<T extends IsIdentified> {
     public abstract T getByBusinessId(String businessId);
 
     public void add(T item) throws RepositoryException {
-        boolean exceptionFlag = true;
         if (item.getId() != null) {
             if (this.get(item.getId()) == null) {
                 this.listOfItems.add(item);
-                exceptionFlag = false;
+            } else {
+                throw new RepositoryException();
             }
+        } else {
+            throw new RepositoryException();
         }
-        if (exceptionFlag)
-            throw new RepositoryException("Operation 'add(item)' in " + this.getClass().getSimpleName() + " failed!");
     }
 
     public T get(String id) {
@@ -42,7 +42,7 @@ public abstract class AbstractRepository<T extends IsIdentified> {
 
     public void remove(T item) throws RepositoryException {
         if (!this.listOfItems.remove(item)) {
-            throw new RepositoryException("Operation 'remove(T)' in " + this.getClass().getSimpleName() + " failed!");
+            throw new RepositoryException();
         }
     }
 
@@ -51,7 +51,7 @@ public abstract class AbstractRepository<T extends IsIdentified> {
                 .filter(item -> item.getId().equals(id))
                 .findAny()
                 .orElse(null))) {
-            throw new RepositoryException("Operation 'remove(id)' in " + this.getClass().getSimpleName() + " failed!");
+            throw new RepositoryException();
         }
     }
 

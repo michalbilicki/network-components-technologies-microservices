@@ -1,7 +1,7 @@
 import org.junit.jupiter.api.*;
-import Model.dto.BasketballFacilityRestDTO;
-import Model.dto.FieldRestDTO;
-import Model.dto.FootballFacilityRestDTO;
+import Model.dto.BasketballFacilityDto;
+import Model.dto.FieldDto;
+import Model.dto.FootballFacilityDto;
 
 import javax.ws.rs.client.Entity;
 import javax.ws.rs.core.GenericType;
@@ -34,8 +34,8 @@ public class SportsFacilityTest extends AbstractContainerBase {
     @Test
     @Order(2)
     public void addBasketballFacilityTest() {
-        BasketballFacilityRestDTO basketballFacilityDTO = new BasketballFacilityRestDTO();
-        FieldRestDTO fieldDTO = new FieldRestDTO();
+        BasketballFacilityDto basketballFacilityDTO = new BasketballFacilityDto();
+        FieldDto fieldDTO = new FieldDto();
         fieldDTO.setTypeOfGround("test");
         fieldDTO.setSurfaceArea(10);
         fieldDTO.setMaxAmountOfPeople(10);
@@ -76,7 +76,7 @@ public class SportsFacilityTest extends AbstractContainerBase {
                 .request(MediaType.APPLICATION_JSON)
                 .get();
         Assertions.assertEquals(200, response.getStatus());
-        BasketballFacilityRestDTO basketballFacilityDTO = response.readEntity(BasketballFacilityRestDTO.class);
+        BasketballFacilityDto basketballFacilityDTO = response.readEntity(BasketballFacilityDto.class);
         Assertions.assertEquals("test", basketballFacilityDTO.getName());
     }
 
@@ -155,8 +155,8 @@ public class SportsFacilityTest extends AbstractContainerBase {
     @Test
     @Order(8)
     public void addFootballFacilityTest() {
-        FootballFacilityRestDTO footballFacilityDTO = new FootballFacilityRestDTO();
-        FieldRestDTO fieldDTO = new FieldRestDTO();
+        FootballFacilityDto footballFacilityDTO = new FootballFacilityDto();
+        FieldDto fieldDTO = new FieldDto();
         fieldDTO.setTypeOfGround("test");
         fieldDTO.setSurfaceArea(10);
         fieldDTO.setMaxAmountOfPeople(10);

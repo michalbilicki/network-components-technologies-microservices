@@ -1,8 +1,8 @@
 package endpoints;
 
-import ApplicationPorts.User.ClientUseCase;
+import ApplicationPorts.User.ClientServiceUseCase;
 import Model.ViewClientRestConverter;
-import Model.dto.ClientRestDTO;
+import Model.dto.ClientDto;
 import exceptions.RepositoryException;
 
 import javax.inject.Inject;
@@ -17,14 +17,14 @@ import java.util.stream.Collectors;
 public class ClientEndpoint {
 
     @Inject
-    private ClientUseCase clientUseCase;
+    private ClientServiceUseCase clientServiceUseCase;
 
     @PUT
     @Path("update")
     @Consumes({MediaType.APPLICATION_JSON})
-    public Response updateClient(ClientRestDTO clientRestDTO) {
+    public Response updateClient(ClientDto clientDto) {
         try {
-            clientUseCase.updateClient(ViewClientRestConverter.convertFrom(clientRestDTO));
+            clientServiceUseCase.updateClient(ViewClientRestConverter.convertFrom(clientDto));
             return Response.ok().build();
         } catch (RepositoryException e) {
             return Response.status(Response.Status.BAD_REQUEST).build();
@@ -35,7 +35,7 @@ public class ClientEndpoint {
     @Path("clients")
     @Produces({MediaType.APPLICATION_JSON})
     public Response getClients() {
-        List<ClientRestDTO> list = clientUseCase.getAllClients()
+        List<ClientDto> list = clientServiceUseCase.getAllClients()
                 .stream()
                 .map(ViewClientRestConverter::convertTo)
                 .collect(Collectors.toList());
@@ -47,8 +47,8 @@ public class ClientEndpoint {
     @Produces({MediaType.APPLICATION_JSON})
     public Response getClient(@PathParam("id") String id) {
         try {
-            ClientRestDTO clientRestDTO = ViewClientRestConverter.convertTo(clientUseCase.getClient(UUID.fromString(id)));
-            return Response.ok().entity(clientRestDTO).build();
+            ClientDto clientDto = ViewClientRestConverter.convertTo(clientServiceUseCase.getClient(UUID.fromString(id)));
+            return Response.ok().entity(clientDto).build();
         } catch (RepositoryException e) {
             return Response.status(Response.Status.BAD_REQUEST).build();
         }

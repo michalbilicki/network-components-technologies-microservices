@@ -164,8 +164,7 @@ public class AccountServiceTest extends AbstractContainerBase {
                 "testPass",
                 "TestName TestSurname",
                 true,
-                new ArrayList<String>(),
-                null
+                new ArrayList<String>()
         );
 
         Response response = client
@@ -194,8 +193,7 @@ public class AccountServiceTest extends AbstractContainerBase {
                 "testPass",
                 "TestName TestSurname",
                 true,
-                new ArrayList<String>(),
-                null
+                new ArrayList<String>()
         );
 
         Response response = client

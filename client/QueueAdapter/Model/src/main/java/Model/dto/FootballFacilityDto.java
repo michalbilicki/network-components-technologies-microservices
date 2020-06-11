@@ -1,4 +1,4 @@
-package dto;
+package Model.dto;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;
@@ -17,6 +17,7 @@ public class FootballFacilityDto extends SportsFacilityDto {
     private double heightOfGoal;
 
     public FootballFacilityDto() {
+
     }
 
     public FootballFacilityDto(String id, double pricePerHours, boolean access, FieldDto field, String name, boolean fullSize, double widthOfGoal, double heightOfGoal) {
@@ -25,5 +26,4 @@ public class FootballFacilityDto extends SportsFacilityDto {
         this.widthOfGoal = widthOfGoal;
         this.heightOfGoal = heightOfGoal;
     }
-
 }

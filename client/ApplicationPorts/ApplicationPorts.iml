@@ -11,13 +11,6 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="Maven: org.glassfish:javax.faces:2.3.0" level="project" />
-    <orderEntry type="library" name="Maven: org.primefaces:primefaces:7.0" level="project" />
-    <orderEntry type="library" name="Maven: com.github.javafaker:javafaker:1.0.2" level="project" />
-    <orderEntry type="library" name="Maven: org.apache.commons:commons-lang3:3.5" level="project" />
-    <orderEntry type="library" name="Maven: org.yaml:snakeyaml:android:1.23" level="project" />
-    <orderEntry type="library" name="Maven: com.github.mifmif:generex:1.0.2" level="project" />
-    <orderEntry type="library" name="Maven: dk.brics.automaton:automaton:1.11-8" level="project" />
     <orderEntry type="module" module-name="DomainModel" />
     <orderEntry type="library" name="Maven: org.glassfish:javax.faces:2.3.0" level="project" />
     <orderEntry type="library" name="Maven: org.primefaces:primefaces:7.0" level="project" />

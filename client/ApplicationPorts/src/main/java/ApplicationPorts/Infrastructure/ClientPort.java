@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.UUID;
 import java.util.function.Predicate;
 
-public interface ClientServicePort {
+public interface ClientPort {
 
     Client get(UUID id) throws RepositoryException;
 

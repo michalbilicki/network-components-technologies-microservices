@@ -1,6 +1,8 @@
 package RepositoryAdapter.adapter;
 
 import ApplicationPorts.Infrastructure.*;
+import DataModel.FieldEnt;
+import DataModel.RoleEnt;
 import DomainModel.SportsFacility;
 import DataModel.SportsFacilityEnt;
 import Repository.SportsFacilityRepository;
@@ -17,7 +19,7 @@ import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
 @ApplicationScoped
-public class RepositoryFacilityAdapter implements FacilityServicePort {
+public class RepositoryFacilityAdapter implements FacilityPort {
 
     @Inject
     private SportsFacilityRepository sportsFacilityRepository;

@@ -1,15 +1,15 @@
 package endpoints;
 
-import ApplicationPorts.User.ClientUseCase;
-import ApplicationPorts.User.ReservationUseCase;
+import ApplicationPorts.User.ClientServiceUseCase;
+import ApplicationPorts.User.ReservationServiceUseCase;
 import Model.ViewReservationRestConverter;
 import exception.ReservationException;
 import exceptions.RepositoryConverterException;
 import exceptions.RepositoryException;
 import exceptions.ReservationError;
 import exceptions.SportsFacilityDoesNotExists;
-import Model.dto.ReservationDetailsRestDTO;
-import Model.dto.ReservationRestDTO;
+import Model.dto.ReservationDetailsDto;
+import Model.dto.ReservationDto;
 
 import javax.inject.Inject;
 import javax.validation.Valid;
@@ -25,17 +25,17 @@ import java.util.stream.Collectors;
 public class ReservationEndpoint {
 
     @Inject
-    private ClientUseCase clientUseCase;
+    private ClientServiceUseCase clientServiceUseCase;
 
     @Inject
-    private ReservationUseCase reservationUseCase;
+    private ReservationServiceUseCase reservationServiceUseCase;
 
     @GET
     @Path("{id}")
     @Produces(MediaType.APPLICATION_JSON)
     public Response getReservation(@PathParam("id") String id) {
         try {
-            ReservationRestDTO result = ViewReservationRestConverter.convertTo(reservationUseCase.getReservation(UUID.fromString(id)));
+            ReservationDto result = ViewReservationRestConverter.convertTo(reservationServiceUseCase.getReservation(UUID.fromString(id)));
             return Response.ok().entity(result).build();
         } catch (RepositoryException e) {
             return Response.status(Response.Status.BAD_REQUEST).build();
@@ -46,7 +46,7 @@ public class ReservationEndpoint {
     @Path("reservations")
     @Produces(MediaType.APPLICATION_JSON)
     public Response getAllReservations() {
-        List<ReservationRestDTO> list = reservationUseCase.getAll()
+        List<ReservationDto> list = reservationServiceUseCase.getAll()
                 .stream()
                 .map(ViewReservationRestConverter::convertTo)
                 .collect(Collectors.toList());
@@ -58,7 +58,7 @@ public class ReservationEndpoint {
     @Produces(MediaType.APPLICATION_JSON)
     public Response getClientReservations(@PathParam("id") String id) {
         try {
-            List<ReservationRestDTO> list = clientUseCase.getClientReservation(UUID.fromString(id)).stream()
+            List<ReservationDto> list = clientServiceUseCase.getClientReservation(UUID.fromString(id)).stream()
                     .map(ViewReservationRestConverter::convertTo)
                     .collect(Collectors.toList());
             return Response.ok().entity(list).build();
@@ -71,7 +71,7 @@ public class ReservationEndpoint {
     @Path("{id}")
     public Response removeReservation(@PathParam("id") String id) {
         try {
-            reservationUseCase.removeReservation(UUID.fromString(id));
+            reservationServiceUseCase.removeReservation(UUID.fromString(id));
             return Response.ok().build();
         } catch (RepositoryException e) {
             return Response.status(Response.Status.BAD_REQUEST).build();
@@ -82,7 +82,7 @@ public class ReservationEndpoint {
     @Path("{clientId}/{reservationId}")
     public Response cancelReservation(@PathParam("clientId") String clientId, @PathParam("reservationId") String reservationId) {
         try {
-            reservationUseCase.cancelReservation(UUID.fromString(clientId), UUID.fromString(reservationId));
+            reservationServiceUseCase.cancelReservation(UUID.fromString(clientId), UUID.fromString(reservationId));
             return Response.ok().build();
         } catch (ReservationError | RepositoryException reservationError) {
             return Response.status(Response.Status.BAD_REQUEST).build();
@@ -91,7 +91,7 @@ public class ReservationEndpoint {
 
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
-    public Response makeReservation(@Valid ReservationDetailsRestDTO reservationDetailsDTO) {
+    public Response makeReservation(@Valid ReservationDetailsDto reservationDetailsDTO) {
 
         try {
             if (reservationDetailsDTO == null) {
@@ -102,7 +102,7 @@ public class ReservationEndpoint {
             String sportsFacilityId = reservationDetailsDTO.getSportsFacilityId();
             LocalDateTime startDate = reservationDetailsDTO.getStartDate();
             LocalDateTime endDate = reservationDetailsDTO.getEndDate();
-            clientUseCase.createReservation(UUID.fromString(clientId), UUID.fromString(sportsFacilityId), startDate, endDate);
+            clientServiceUseCase.createReservation(UUID.fromString(clientId), UUID.fromString(sportsFacilityId), startDate, endDate);
             return Response.ok().build();
         } catch (RepositoryException | RepositoryConverterException | SportsFacilityDoesNotExists | ReservationError e) {
             return Response.status(Response.Status.BAD_REQUEST).build();

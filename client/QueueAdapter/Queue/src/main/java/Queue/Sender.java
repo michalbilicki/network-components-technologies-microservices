@@ -1,46 +1,41 @@
-package queue;
+package Queue;
+
+import com.rabbitmq.client.AMQP;
+import com.rabbitmq.client.Channel;
+import com.rabbitmq.client.Connection;
+import com.rabbitmq.client.ConnectionFactory;
+import utils.Consts;
 
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.util.concurrent.TimeoutException;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.rabbitmq.client.*;
-import utils.Consts;
-
-import javax.json.bind.Jsonb;
-import javax.json.bind.JsonbBuilder;
-
-public class Sender<T> {
+public class Sender {
 
     private String queueName;
     private ConnectionFactory factory;
-    private Jsonb jsonb;
 
     public Sender(String queueName) {
-        this.queueName = queueName;
+        this.queueName = queueName + "_RESPONSE";
         this.factory = new ConnectionFactory();
         factory.setHost(Consts.HOST);
-        jsonb = JsonbBuilder.create();
     }
 
-    public void send(T arg, String corrId) {
+    public void send(String message, String corrId) {
         try {
             Connection connection = factory.newConnection();
             Channel channel = connection.createChannel();
-            channel.queueDeclare(queueName, false, false, false, null);
 
+            channel.queueDeclare(queueName, false, false, false, null);
             AMQP.BasicProperties props = new AMQP.BasicProperties
                     .Builder()
                     .correlationId(corrId)
-                    .replyTo(queueName)
                     .build();
 
-            channel.basicPublish("", queueName, props, jsonb.toJson(arg).getBytes(StandardCharsets.UTF_8));
-
-            System.out.println("[ SEND ]    API_GATEWAY: " + arg);
+            channel.basicPublish("", queueName, props, message.getBytes(StandardCharsets.UTF_8));
+            System.out.println("[ SEND ] CLIENT: " + message);
         } catch (IOException | TimeoutException e) {
-            e.printStackTrace();
+            System.out.println(e.getMessage());
         }
     }
 

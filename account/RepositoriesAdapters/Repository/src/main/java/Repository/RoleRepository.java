@@ -32,7 +32,7 @@ public class RoleRepository extends AbstractRepository<RoleEnt> implements Seria
         if (roleToUpdate != null) {
             roleToUpdate.setName(item.getName());
         } else {
-            throw new RepositoryException("Operation 'update(item)' in " + this.getClass().getSimpleName() + " failed!");
+            throw new RepositoryException();
         }
     }
 

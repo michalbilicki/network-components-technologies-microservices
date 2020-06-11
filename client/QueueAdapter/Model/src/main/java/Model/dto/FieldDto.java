@@ -12,7 +12,7 @@ import java.io.Serializable;
 @JsonbNillable
 @AllArgsConstructor
 @NoArgsConstructor
-public class FieldRestDTO implements Serializable {
+public class FieldDto implements Serializable {
 
     private double surfaceArea;
     private int maxAmountOfPeople;

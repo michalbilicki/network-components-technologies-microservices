@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.UUID;
 import java.util.function.Predicate;
 
-public interface AccountServicePort {
+public interface AccountPort {
     void addAccount(Account arg) throws RepositoryException, RepositoryException, RepositoryConverterException, RepositoryConverterException;
 
     List<Account> getFilteredAccount(Predicate<Account> predicate) throws RepositoryConverterException;

@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.UUID;
 import java.util.function.Predicate;
 
-public interface ReservationServicePort {
+public interface ReservationPort {
 
     void add(Reservation arg) throws RepositoryException;
 

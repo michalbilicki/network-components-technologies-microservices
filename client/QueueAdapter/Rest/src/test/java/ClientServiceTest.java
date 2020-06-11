@@ -1,7 +1,7 @@
 import org.junit.jupiter.api.*;
 import org.junit.jupiter.api.Assertions;
 
-import Model.dto.ClientRestDTO;
+import Model.dto.ClientDto;
 
 import javax.ws.rs.client.Entity;
 import javax.ws.rs.core.GenericType;
@@ -20,8 +20,8 @@ public class ClientServiceTest extends AbstractContainerBase {
                 .get();
 
 
-        Collection<ClientRestDTO> clientDTOList = response
-                .readEntity(new GenericType<Collection<ClientRestDTO>>() {
+        Collection<ClientDto> clientDTOList = response
+                .readEntity(new GenericType<Collection<ClientDto>>() {
                 });
 
         Assertions.assertEquals(200, response.getStatus());
@@ -42,20 +42,20 @@ public class ClientServiceTest extends AbstractContainerBase {
                 .path("client/clients")
                 .request(MediaType.APPLICATION_JSON)
                 .get();
-        Collection<ClientRestDTO> clientDTOList = response
-                .readEntity(new GenericType<Collection<ClientRestDTO>>() {
+        Collection<ClientDto> clientDTOList = response
+                .readEntity(new GenericType<Collection<ClientDto>>() {
                 });
         Assertions.assertEquals(200, response.getStatus());
         Assertions.assertEquals(24, clientDTOList.size());
 
-        ClientRestDTO clientDTO = clientDTOList.toArray(new ClientRestDTO[0])[0];
+        ClientDto clientDTO = clientDTOList.toArray(new ClientDto[0])[0];
         response = client
                 .target(BASE_URL)
                 .path("client/" + clientDTO.getId())
                 .request(MediaType.APPLICATION_JSON)
                 .get();
         Assertions.assertEquals(200, response.getStatus());
-        ClientRestDTO getClient = response.readEntity(ClientRestDTO.class);
+        ClientDto getClient = response.readEntity(ClientDto.class);
         Assertions.assertEquals(clientDTO, getClient);
     }
 
@@ -66,11 +66,11 @@ public class ClientServiceTest extends AbstractContainerBase {
                 .path("client/clients")
                 .request(MediaType.APPLICATION_JSON)
                 .get();
-        Collection<ClientRestDTO> clientDTOList = response
-                .readEntity(new GenericType<Collection<ClientRestDTO>>() {
+        Collection<ClientDto> clientDTOList = response
+                .readEntity(new GenericType<Collection<ClientDto>>() {
                 });
 
-        ClientRestDTO clientDTO = clientDTOList.toArray(new ClientRestDTO[0])[0];
+        ClientDto clientDTO = clientDTOList.toArray(new ClientDto[0])[0];
 
         response = client
                 .target(BASE_URL)
@@ -84,7 +84,7 @@ public class ClientServiceTest extends AbstractContainerBase {
                 .path("client/" + clientDTO.getId())
                 .request(MediaType.APPLICATION_JSON)
                 .get();
-        ClientRestDTO getClient = response.readEntity(ClientRestDTO.class);
+        ClientDto getClient = response.readEntity(ClientDto.class);
         Assertions.assertEquals(clientDTO, getClient);
     }
 }

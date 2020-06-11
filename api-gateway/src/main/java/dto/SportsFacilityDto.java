@@ -1,5 +1,6 @@
 package dto;
 
+import com.fasterxml.jackson.annotation.*;
 import lombok.Data;
 
 import javax.json.bind.annotation.JsonbNillable;
@@ -7,7 +8,7 @@ import java.io.Serializable;
 
 @Data
 @JsonbNillable
-public abstract class SportsFacilityDto implements Serializable {
+public class SportsFacilityDto implements Serializable {
 
     private String id;
 
@@ -25,7 +26,7 @@ public abstract class SportsFacilityDto implements Serializable {
 
     }
 
-    public SportsFacilityDto(String id, double pricePerHours, boolean access, FieldDto field, String name, String type) {
+    public SportsFacilityDto(String id, double pricePerHours, boolean access, FieldDto field, String name) {
         this.id = id;
         this.pricePerHours = pricePerHours;
         this.access = access;
@@ -33,4 +34,12 @@ public abstract class SportsFacilityDto implements Serializable {
         this.name = name;
     }
 
+    public SportsFacilityDto(String id, double pricePerHours, boolean access, FieldDto field, String name, String sportsFacilityType) {
+        this.id = id;
+        this.pricePerHours = pricePerHours;
+        this.access = access;
+        this.field = field;
+        this.name = name;
+        this.sportsFacilityType = sportsFacilityType;
+    }
 }

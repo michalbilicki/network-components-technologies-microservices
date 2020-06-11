@@ -1,8 +1,8 @@
 package ApplicationServices;
 
-import ApplicationPorts.Infrastructure.ClientServicePort;
-import ApplicationPorts.Infrastructure.ReservationServicePort;
-import ApplicationPorts.User.ClientUseCase;
+import ApplicationPorts.Infrastructure.ClientPort;
+import ApplicationPorts.Infrastructure.ReservationPort;
+import ApplicationPorts.User.ClientServiceUseCase;
 import DomainModel.Client;
 import DomainModel.Reservation;
 import DomainModel.SportsFacility;
@@ -11,21 +11,19 @@ import exceptions.*;
 import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
 import javax.inject.Named;
-import javax.json.bind.Jsonb;
-import javax.json.bind.JsonbBuilder;
 import java.time.LocalDateTime;
 import java.util.List;
 import java.util.UUID;
 
 @ApplicationScoped
 @Named("ClientService")
-public class ClientService implements ClientUseCase {
+public class ClientService implements ClientServiceUseCase {
 
     @Inject
-    private ClientServicePort clientServicePort;
+    private ClientPort clientPort;
 
     @Inject
-    private ReservationServicePort reservationServicePort;
+    private ReservationPort reservationPort;
 
     @Inject
     private ReservationService reservationService;
@@ -42,7 +40,7 @@ public class ClientService implements ClientUseCase {
 
     @Override
     public void createReservation(UUID clientId, UUID sportsFacilityId, LocalDateTime start, LocalDateTime end) throws RepositoryException, RepositoryConverterException, SportsFacilityDoesNotExists, ReservationError {
-        Client client = clientServicePort.get(clientId);
+        Client client = clientPort.get(clientId);
         SportsFacility sportsFacility = facilityService.getSportsFacility(sportsFacilityId);
         if (sportsFacility == null) {
             throw new SportsFacilityDoesNotExists();
@@ -56,31 +54,31 @@ public class ClientService implements ClientUseCase {
             }
         }
 
-        reservationServicePort.add(new Reservation(client.getId(), start, end, sportsFacility.getId().toString()));
+        reservationPort.add(new Reservation(client.getId(), start, end, sportsFacility.getId().toString()));
     }
 
     @Override
     public List<Reservation> getClientReservation(UUID clientId) throws RepositoryException {
-        return reservationService.getUserReservations(clientServicePort.get(clientId));
+        return reservationService.getUserReservations(clientPort.get(clientId));
     }
 
     @Override
     public Client getClient(UUID id) throws RepositoryException {
-        return clientServicePort.get(id);
+        return clientPort.get(id);
     }
 
     @Override
     public List<Client> getAllClients() {
-        return clientServicePort.getAll();
+        return clientPort.getAll();
     }
 
     @Override
     public void updateClient(Client client) throws RepositoryException {
-        clientServicePort.update(client);
+        clientPort.update(client);
     }
 
     @Override
     public void add(Client client) throws RepositoryException {
-        clientServicePort.add(client);
+        clientPort.add(client);
     }
 }

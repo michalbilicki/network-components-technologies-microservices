@@ -54,9 +54,9 @@ public class AddAccountReceiver implements Serializable {
                     Sender sender = new Sender(Consts.ADD_ACCOUNT_QUEUE);
                     try {
                         accountServiceUseCase.addAccount(account);
-                        sender.send(Boolean.toString(true), accountDto.getCorrId());
+                        sender.send(Boolean.toString(true), accountDto.getId());
                     } catch (RepositoryConverterException | RepositoryException e) {
-                        sender.send(Boolean.toString(false), accountDto.getCorrId());
+                        sender.send(Boolean.toString(false), accountDto.getId());
                     }
 
                 }

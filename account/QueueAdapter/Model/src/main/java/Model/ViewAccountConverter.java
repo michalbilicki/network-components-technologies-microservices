@@ -24,8 +24,7 @@ public class ViewAccountConverter implements ViewTwoWayConverter<AccountDto, Acc
                         arg.getRoles()
                                 .stream()
                                 .map(Role::getName)
-                                .collect(Collectors.joining())),
-                null
+                                .collect(Collectors.joining()))
         );
     }
 
