@@ -21,7 +21,8 @@ import java.util.stream.Collectors;
 
 @Named("RepositoryAccountAdapter")
 @ApplicationScoped
-public class RepositoryAccountAdapter implements AccountServicePort {
+public class RepositoryAccountAdapter
+        implements AccountServicePort {
 
     @Inject
     private AccountRepository accountRepository;

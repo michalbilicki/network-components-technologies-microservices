@@ -15,6 +15,7 @@
         <module name="DomainModel" />
         <module name="ApplicationPorts" />
         <module name="RepositoryAdapter" />
+        <module name="Rest" />
         <module name="Model" />
       </profile>
     </annotationProcessing>

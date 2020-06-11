@@ -14,6 +14,7 @@
       <module fileurl="file://$PROJECT_DIR$/RepositoriesAdapters/RepositoriesAdapters.iml" filepath="$PROJECT_DIR$/RepositoriesAdapters/RepositoriesAdapters.iml" />
       <module fileurl="file://$PROJECT_DIR$/RepositoriesAdapters/Repository/Repository.iml" filepath="$PROJECT_DIR$/RepositoriesAdapters/Repository/Repository.iml" />
       <module fileurl="file://$PROJECT_DIR$/RepositoriesAdapters/RepositoryAdapter/RepositoryAdapter.iml" filepath="$PROJECT_DIR$/RepositoriesAdapters/RepositoryAdapter/RepositoryAdapter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/QueueAdapter/Rest/Rest.iml" filepath="$PROJECT_DIR$/QueueAdapter/Rest/Rest.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/account.iml" filepath="$PROJECT_DIR$/.idea/account.iml" />
     </modules>
   </component>
