@@ -1,7 +1,7 @@
 package exceptions;
 
 public class ViewConverterException extends Exception {
-    public ViewConverterException(String msg){
+    public ViewConverterException(String msg) {
         super("CONVERSION ERROR: " + msg);
     }
 }

@@ -1,6 +1,7 @@
 package Repository;
 
 import DataModel.RoleEnt;
+
 import javax.enterprise.context.ApplicationScoped;
 import java.io.Serializable;
 import java.util.List;

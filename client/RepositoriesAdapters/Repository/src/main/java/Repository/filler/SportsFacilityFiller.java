@@ -1,10 +1,10 @@
 package Repository.filler;
 
-import com.github.javafaker.Faker;
 import DataModel.BasketballFacilityEnt;
 import DataModel.FieldEnt;
 import DataModel.FootballFacilityEnt;
 import DataModel.SportsFacilityEnt;
+import com.github.javafaker.Faker;
 
 import javax.enterprise.context.ApplicationScoped;
 import java.io.Serializable;

@@ -7,11 +7,11 @@ import com.rabbitmq.client.DeliverCallback;
 
 import javax.json.bind.Jsonb;
 import javax.json.bind.JsonbBuilder;
+import javax.servlet.ServletContextEvent;
+import javax.servlet.ServletContextListener;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.util.concurrent.TimeoutException;
-import javax.servlet.ServletContextListener;
-import javax.servlet.ServletContextEvent;
 
 public class Receiver2<T> implements ServletContextListener {
 

@@ -2,7 +2,7 @@ package exceptions;
 
 public class RepositoryConverterException extends Exception {
 
-    public RepositoryConverterException(){
+    public RepositoryConverterException() {
         super();
     }
 }

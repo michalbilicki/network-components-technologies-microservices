@@ -5,7 +5,6 @@ import DomainModel.Account;
 import Model.AccountDto;
 import Model.ViewAccountConverter;
 import com.rabbitmq.client.*;
-import exceptions.RepositoryConverterException;
 import exceptions.RepositoryException;
 import utils.Consts;
 

@@ -1,10 +1,8 @@
 package RepositoryAdapter.adapter;
 
-import ApplicationPorts.Infrastructure.*;
-import DataModel.FieldEnt;
-import DataModel.RoleEnt;
-import DomainModel.SportsFacility;
+import ApplicationPorts.Infrastructure.FacilityPort;
 import DataModel.SportsFacilityEnt;
+import DomainModel.SportsFacility;
 import Repository.SportsFacilityRepository;
 import RepositoryAdapter.converter.RepositoryFacilityConverter;
 import exceptions.RepositoryConverterException;
@@ -33,7 +31,7 @@ public class RepositoryFacilityAdapter implements FacilityPort {
     public List<SportsFacility> getAll() throws RepositoryConverterException {
         List<SportsFacilityEnt> toConvert = sportsFacilityRepository.getAll();
         List<SportsFacility> result = new ArrayList<SportsFacility>();
-        for(SportsFacilityEnt item : toConvert){
+        for (SportsFacilityEnt item : toConvert) {
             result.add(RepositoryFacilityConverter.convertTo(item));
         }
         return result;

@@ -9,7 +9,8 @@ public class Client {
     private String surname;
     private boolean active;
 
-    public Client() {}
+    public Client() {
+    }
 
     public Client(String id, String login, String name, String surname, boolean active) {
         this.id = id;

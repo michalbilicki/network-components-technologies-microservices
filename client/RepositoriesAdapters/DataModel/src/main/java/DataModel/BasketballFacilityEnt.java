@@ -1,7 +1,6 @@
 package DataModel;
 
 
-
 import javax.validation.constraints.DecimalMin;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;

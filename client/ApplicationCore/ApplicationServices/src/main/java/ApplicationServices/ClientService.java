@@ -6,7 +6,10 @@ import ApplicationPorts.User.ClientServiceUseCase;
 import DomainModel.Client;
 import DomainModel.Reservation;
 import DomainModel.SportsFacility;
-import exceptions.*;
+import exceptions.RepositoryConverterException;
+import exceptions.RepositoryException;
+import exceptions.ReservationError;
+import exceptions.SportsFacilityDoesNotExists;
 
 import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
@@ -20,16 +23,13 @@ import java.util.UUID;
 public class ClientService implements ClientServiceUseCase {
 
     @Inject
+    FacilityService facilityService;
+    @Inject
     private ClientPort clientPort;
-
     @Inject
     private ReservationPort reservationPort;
-
     @Inject
     private ReservationService reservationService;
-
-    @Inject
-    FacilityService facilityService;
 
     private boolean checkDate(LocalDateTime start, LocalDateTime end) {
         if (end.compareTo(start) <= 0) {

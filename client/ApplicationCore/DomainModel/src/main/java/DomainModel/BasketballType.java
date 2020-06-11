@@ -4,7 +4,7 @@ import java.util.HashMap;
 
 public class BasketballType extends SportsFacilityType {
 
-    public BasketballType(int numberOFBasket, double minHeightOfBasket, double maxHeightOfBasket){
+    public BasketballType(int numberOFBasket, double minHeightOfBasket, double maxHeightOfBasket) {
         HashMap<String, String> properties = new HashMap<>();
         properties.put("numberOfBasket", String.valueOf(numberOFBasket));
         properties.put("minHeightOfBasket", String.valueOf(minHeightOfBasket));

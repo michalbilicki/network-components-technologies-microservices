@@ -1,8 +1,7 @@
 package Repository;
 
-import exceptions.RepositoryException;
 import DataModel.IsIdentified;
-import Repository.Filler;
+import exceptions.RepositoryException;
 
 import java.util.List;
 import java.util.function.Predicate;
@@ -14,7 +13,7 @@ public abstract class AbstractRepository<T extends IsIdentified> {
     private Filler<T> filler;
 
     public abstract void update(T item) throws RepositoryException;
-    
+
     public abstract T getByBusinessId(String businessId);
 
     public void add(T item) throws RepositoryException {

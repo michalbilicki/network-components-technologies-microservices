@@ -1,10 +1,10 @@
 package RepositoryAdapter.adapter;
 
-import ApplicationPorts.Infrastructure.*;
+import ApplicationPorts.Infrastructure.ReservationPort;
 import DataModel.ClientEnt;
+import DataModel.ReservationEnt;
 import DataModel.SportsFacilityEnt;
 import DomainModel.Reservation;
-import DataModel.ReservationEnt;
 import Repository.ClientRepository;
 import Repository.ReservationRepository;
 import Repository.SportsFacilityRepository;

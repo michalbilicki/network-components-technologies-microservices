@@ -1,6 +1,5 @@
 package dto;
 
-import com.fasterxml.jackson.annotation.*;
 import lombok.Data;
 
 import javax.json.bind.annotation.JsonbNillable;
@@ -21,7 +20,7 @@ public class SportsFacilityDto implements Serializable {
     private String name;
 
     private String sportsFacilityType = this.getClass().getSimpleName();
-    
+
     public SportsFacilityDto() {
 
     }

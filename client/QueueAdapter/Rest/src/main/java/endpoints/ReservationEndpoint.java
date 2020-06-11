@@ -3,13 +3,13 @@ package endpoints;
 import ApplicationPorts.User.ClientServiceUseCase;
 import ApplicationPorts.User.ReservationServiceUseCase;
 import Model.ViewReservationRestConverter;
+import Model.dto.ReservationDetailsDto;
+import Model.dto.ReservationDto;
 import exception.ReservationException;
 import exceptions.RepositoryConverterException;
 import exceptions.RepositoryException;
 import exceptions.ReservationError;
 import exceptions.SportsFacilityDoesNotExists;
-import Model.dto.ReservationDetailsDto;
-import Model.dto.ReservationDto;
 
 import javax.inject.Inject;
 import javax.validation.Valid;

@@ -93,8 +93,6 @@ public class AddAccountReceiver implements ServletContextListener {
 //}
 
 
-
-
 //public class Receiver {
 //
 //    private final static String QUEUE_NAME = "CLIENT_ACCOUNT_CREATE_RESPONSE";

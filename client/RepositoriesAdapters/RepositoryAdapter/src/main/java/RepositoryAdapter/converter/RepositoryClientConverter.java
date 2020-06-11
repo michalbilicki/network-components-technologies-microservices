@@ -1,7 +1,7 @@
 package RepositoryAdapter.converter;
 
-import DomainModel.Client;
 import DataModel.ClientEnt;
+import DomainModel.Client;
 
 public class RepositoryClientConverter {
 

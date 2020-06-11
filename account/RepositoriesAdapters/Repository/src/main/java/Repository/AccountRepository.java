@@ -1,8 +1,8 @@
 package Repository;
 
 
-import exceptions.RepositoryException;
 import DataModel.AccountEnt;
+import exceptions.RepositoryException;
 
 import javax.annotation.PostConstruct;
 import javax.enterprise.context.ApplicationScoped;

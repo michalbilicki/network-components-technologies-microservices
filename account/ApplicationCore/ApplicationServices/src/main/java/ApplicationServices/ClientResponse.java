@@ -4,7 +4,8 @@ public class ClientResponse {
     private String id;
     private boolean status;
 
-    public ClientResponse() {}
+    public ClientResponse() {
+    }
 
     public ClientResponse(String id, boolean status) {
         this.id = id;

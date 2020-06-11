@@ -1,6 +1,6 @@
 import endpoints.AccountEndpoint;
-import endpoints.ReservationEndpoint;
 import endpoints.FacilityEndpoint;
+import endpoints.ReservationEndpoint;
 
 import javax.ws.rs.ApplicationPath;
 import javax.ws.rs.core.Application;

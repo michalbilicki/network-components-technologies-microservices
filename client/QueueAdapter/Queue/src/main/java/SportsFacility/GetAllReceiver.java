@@ -7,7 +7,6 @@ import Model.dto.SportsFacilityDto;
 import Queue.Sender;
 import com.rabbitmq.client.*;
 import exceptions.RepositoryConverterException;
-import exceptions.RepositoryException;
 import exceptions.ViewConverterException;
 import utils.Consts;
 
@@ -24,7 +23,6 @@ import java.io.Serializable;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.UUID;
 import java.util.concurrent.TimeoutException;
 
 @Singleton
@@ -53,6 +51,7 @@ public class GetAllReceiver implements Serializable {
                     System.out.println("[ RECEIVE ] CLIENT - get all facilities");
 
                     Sender sender = new Sender(Consts.GET_ALL_FACILITY_QUEUE);
+
                     try {
                         List<SportsFacility> facilities = sportFacilityServiceUseCase.getAllSportsFacilities();
 

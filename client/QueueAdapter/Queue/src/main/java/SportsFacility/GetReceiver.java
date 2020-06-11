@@ -51,6 +51,7 @@ public class GetReceiver implements Serializable {
                     System.out.println("[ RECEIVE ] CLIENT - get facility - " + id);
 
                     Sender sender = new Sender(Consts.GET_FACILITY_QUEUE);
+
                     try {
                         SportsFacility sportsFacility = sportFacilityServiceUseCase.getSportsFacility(UUID.fromString(id));
                         if (sportsFacility == null) {

@@ -2,9 +2,9 @@ package DomainModel;
 
 import java.util.HashMap;
 
-public class FootballType extends SportsFacilityType{
+public class FootballType extends SportsFacilityType {
 
-    public FootballType(boolean fullSize, double widthOfGoal, double heightOfGoal){
+    public FootballType(boolean fullSize, double widthOfGoal, double heightOfGoal) {
         HashMap<String, String> properties = new HashMap<>();
         properties.put("fullSize", String.valueOf(fullSize));
         properties.put("widthOfGoal", String.valueOf(widthOfGoal));

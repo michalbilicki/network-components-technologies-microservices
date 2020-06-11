@@ -1,8 +1,8 @@
 package RepositoryAdapter.adapter;
 
 import ApplicationPorts.Infrastructure.ClientPort;
-import DomainModel.Client;
 import DataModel.ClientEnt;
+import DomainModel.Client;
 import Repository.ClientRepository;
 import RepositoryAdapter.converter.RepositoryClientConverter;
 import exceptions.RepositoryException;

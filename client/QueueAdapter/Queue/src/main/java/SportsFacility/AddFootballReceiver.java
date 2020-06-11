@@ -51,6 +51,7 @@ public class AddFootballReceiver implements Serializable {
                     System.out.println("[ RECEIVE ] CLIENT - add football facility - " + footballFacilityDto.toString());
 
                     Sender sender = new Sender(Consts.ADD_FOOTBALL_QUEUE);
+
                     try {
                         SportsFacility footballFacility = ViewFacilityConverter.convertFrom(footballFacilityDto);
                         sportFacilityServiceUseCase.addSportsFacility(footballFacility);

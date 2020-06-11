@@ -1,14 +1,14 @@
 package RepositoryAdapter;
 
-import exceptions.RepositoryException;
+import ApplicationPorts.AccountPort;
+import DataModel.AccountEnt;
+import DataModel.RoleEnt;
 import DomainModel.Account;
 import DomainModel.Role;
-import ApplicationPorts.AccountPort;
-import DataModel.RoleEnt;
-import DataModel.AccountEnt;
 import Repository.AccountRepository;
 import Repository.RoleRepository;
 import exceptions.RepositoryConverterException;
+import exceptions.RepositoryException;
 
 import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;

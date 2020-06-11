@@ -5,15 +5,15 @@ import javax.ws.rs.core.Response;
 
 public class ReservationException extends WebApplicationException {
 
-    public ReservationException(){
+    public ReservationException() {
         super(Response.Status.BAD_REQUEST);
     }
 
-    public ReservationException(String message){
+    public ReservationException(String message) {
         super(Response.status(Response.Status.BAD_REQUEST).entity(message).build());
     }
 
-    public ReservationException(Response.Status status, String message){
+    public ReservationException(Response.Status status, String message) {
         super(Response.status(status).entity(message).build());
     }
 }

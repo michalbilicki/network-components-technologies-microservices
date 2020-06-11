@@ -1,6 +1,5 @@
 package endpoints;
 
-import dto.AccountDto;
 import dto.BasketballFacilityDto;
 import dto.FootballFacilityDto;
 import dto.SportsFacilityDto;
@@ -15,7 +14,6 @@ import javax.json.bind.JsonbException;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
-import java.lang.reflect.Type;
 import java.util.Arrays;
 import java.util.List;
 import java.util.UUID;

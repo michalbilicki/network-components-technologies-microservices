@@ -1,9 +1,8 @@
 package Repository;
 
-import com.github.javafaker.Faker;
-
-import DataModel.RoleEnt;
 import DataModel.AccountEnt;
+import DataModel.RoleEnt;
+import com.github.javafaker.Faker;
 
 import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;

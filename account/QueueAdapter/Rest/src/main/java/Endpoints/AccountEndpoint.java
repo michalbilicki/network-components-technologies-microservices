@@ -1,24 +1,18 @@
 package Endpoints;
 
 
-import ApplicationPorts.AccountServiceUseCase;
 import Model.AccountDto;
-import Model.ViewAccountConverter;
-import exceptions.AccountException;
-import exceptions.AccountNotFoundException;
 
-import javax.inject.Inject;
-import javax.ws.rs.*;
+import javax.ws.rs.Consumes;
+import javax.ws.rs.POST;
+import javax.ws.rs.Path;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
-import java.util.List;
-import java.util.UUID;
-import java.util.stream.Collectors;
 
 @Path("account")
 public class AccountEndpoint {
 
-//    @Inject
+    //    @Inject
 //    private AccountServiceUseCase accountServiceUseCase;
 //
     @POST

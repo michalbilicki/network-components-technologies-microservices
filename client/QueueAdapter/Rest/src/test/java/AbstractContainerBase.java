@@ -1,6 +1,6 @@
 import org.glassfish.jersey.moxy.json.MoxyJsonFeature;
-
-import org.junit.jupiter.api.*;
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.BeforeAll;
 import org.testcontainers.containers.GenericContainer;
 import org.testcontainers.containers.wait.strategy.Wait;
 import org.testcontainers.images.builder.ImageFromDockerfile;
@@ -15,14 +15,6 @@ import java.nio.file.Paths;
 
 public abstract class AbstractContainerBase {
 
-    static Jsonb jsonb = JsonbBuilder.create(new JsonbConfig()
-            .withDateFormat(JsonbDateFormat.DEFAULT_FORMAT, null));
-
-    static Client client = ClientBuilder
-            .newBuilder()
-            .register(MoxyJsonFeature.class)
-            .build();
-
     static final GenericContainer PAYARA = new GenericContainer(
             new ImageFromDockerfile()
                     .withDockerfileFromBuilder(builder ->
@@ -33,7 +25,12 @@ public abstract class AbstractContainerBase {
             .withExposedPorts(8080)
             .waitingFor(Wait.forHttp("/AppWar/restapi/client/clients")
                     .forStatusCode(200));
-
+    static Jsonb jsonb = JsonbBuilder.create(new JsonbConfig()
+            .withDateFormat(JsonbDateFormat.DEFAULT_FORMAT, null));
+    static Client client = ClientBuilder
+            .newBuilder()
+            .register(MoxyJsonFeature.class)
+            .build();
     static String BASE_URL;
 
     @BeforeAll

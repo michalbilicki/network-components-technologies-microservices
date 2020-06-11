@@ -1,13 +1,13 @@
 package RepositoryAdapter.converter;
 
-import DomainModel.BasketballType;
-import DomainModel.Field;
-import DomainModel.FootballType;
-import DomainModel.SportsFacility;
 import DataModel.BasketballFacilityEnt;
 import DataModel.FieldEnt;
 import DataModel.FootballFacilityEnt;
 import DataModel.SportsFacilityEnt;
+import DomainModel.BasketballType;
+import DomainModel.Field;
+import DomainModel.FootballType;
+import DomainModel.SportsFacility;
 import exceptions.RepositoryConverterException;
 
 import java.util.UUID;

@@ -5,15 +5,15 @@ import javax.ws.rs.core.Response;
 
 public class AccountException extends WebApplicationException {
 
-    public AccountException(){
+    public AccountException() {
         super(Response.Status.BAD_REQUEST);
     }
 
-    public AccountException(String message){
+    public AccountException(String message) {
         super(Response.status((Response.Status.BAD_REQUEST)).entity(message).build());
     }
 
-    public AccountException(Response.Status status, String message){
+    public AccountException(Response.Status status, String message) {
         super(Response.status(status).entity(message).build());
     }
 }

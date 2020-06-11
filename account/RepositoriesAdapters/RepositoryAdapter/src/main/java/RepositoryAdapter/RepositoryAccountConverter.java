@@ -1,9 +1,9 @@
 package RepositoryAdapter;
 
+import DataModel.AccountEnt;
+import DataModel.RoleEnt;
 import DomainModel.Account;
 import DomainModel.Role;
-import DataModel.RoleEnt;
-import DataModel.AccountEnt;
 import exceptions.RepositoryConverterException;
 
 import java.util.ArrayList;

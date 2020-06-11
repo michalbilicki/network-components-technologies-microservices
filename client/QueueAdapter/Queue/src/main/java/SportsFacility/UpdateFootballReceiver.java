@@ -4,7 +4,6 @@ import ApplicationPorts.User.SportFacilityServiceUseCase;
 import DomainModel.SportsFacility;
 import Model.ViewFacilityConverter;
 import Model.dto.FootballFacilityDto;
-import Model.dto.SportsFacilityDto;
 import Queue.Sender;
 import com.rabbitmq.client.*;
 import exceptions.RepositoryConverterException;
@@ -52,6 +51,7 @@ public class UpdateFootballReceiver implements Serializable {
                     System.out.println("[ RECEIVE ] CLIENT - update football facility - " + footballFacilityDto.toString());
 
                     Sender sender = new Sender(Consts.UPDATE_FOOTBALL_FACILITY_QUEUE);
+
                     try {
                         SportsFacility sportsFacility = ViewFacilityConverter.convertFrom(footballFacilityDto);
                         sportFacilityServiceUseCase.updateSportsFacility(sportsFacility);

@@ -43,7 +43,7 @@ public class AccountService implements AccountServiceUseCase {
 
     @Override
     public void updateAccount(Account account) throws RepositoryException {
-            accountPort.updateAccount(account);
+        accountPort.updateAccount(account);
     }
 
     public List<Account> filterAccount(Predicate<Account> predicate) throws RepositoryConverterException {
@@ -52,7 +52,7 @@ public class AccountService implements AccountServiceUseCase {
 
     @Override
     public void addAccount(Account account) throws RepositoryConverterException, RepositoryException {
-            accountPort.addAccount(account);
+        accountPort.addAccount(account);
     }
 
     @Override
@@ -73,39 +73,6 @@ public class AccountService implements AccountServiceUseCase {
         }
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 //    public void testMethod() {

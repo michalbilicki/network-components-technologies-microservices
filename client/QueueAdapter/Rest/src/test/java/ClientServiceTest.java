@@ -1,7 +1,6 @@
-import org.junit.jupiter.api.*;
-import org.junit.jupiter.api.Assertions;
-
 import Model.dto.ClientDto;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 import javax.ws.rs.client.Entity;
 import javax.ws.rs.core.GenericType;

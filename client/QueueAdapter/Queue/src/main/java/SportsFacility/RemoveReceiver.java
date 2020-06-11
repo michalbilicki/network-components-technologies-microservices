@@ -45,6 +45,7 @@ public class RemoveReceiver {
                     System.out.println("[ RECEIVE ] CLIENT - remove facility - " + id);
 
                     Sender sender = new Sender(Consts.REMOVE_FACILITY_QUEUE);
+
                     try {
                         sportFacilityServiceUseCase.removeSportsFacility(UUID.fromString(id));
                         sender.send(Boolean.toString(true), id);

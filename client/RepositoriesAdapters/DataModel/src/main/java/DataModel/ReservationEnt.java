@@ -42,15 +42,15 @@ public class ReservationEnt implements IsIdentified {
         return Objects.hash(id);
     }
 
+    @Override
+    public String getId() {
+        return this.id;
+    }
+
     //<editor-fold desc="getters and setters">
     @Override
     public void setId(String id) {
         this.id = id;
-    }
-
-    @Override
-    public String getId() {
-        return this.id;
     }
 
     public boolean isActive() {
@@ -65,28 +65,28 @@ public class ReservationEnt implements IsIdentified {
         return client;
     }
 
-    public SportsFacilityEnt getFacility() {
-        return facility;
-    }
-
-    public Date getStartDate() {
-        return startDate;
-    }
-
-    public Date getEndDate() {
-        return endDate;
-    }
-
     public void setClient(ClientEnt client) {
         this.client = client;
+    }
+
+    public SportsFacilityEnt getFacility() {
+        return facility;
     }
 
     public void setFacility(SportsFacilityEnt facility) {
         this.facility = facility;
     }
 
+    public Date getStartDate() {
+        return startDate;
+    }
+
     public void setStartDate(Date startDate) {
         this.startDate = startDate;
+    }
+
+    public Date getEndDate() {
+        return endDate;
     }
 
     public void setEndDate(Date endDate) {

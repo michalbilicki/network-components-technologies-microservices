@@ -1,7 +1,6 @@
 package endpoints;
 
 import dto.AccountDto;
-import dto.ClientDto;
 import queue.Receiver;
 import queue.Sender;
 import utils.Consts;
@@ -48,7 +47,7 @@ public class AccountEndpoint {
 //                Receiver clientReceiver = new Receiver(Consts.ADD_CLIENT_QUEUE);
 //
 //                if (Boolean.parseBoolean(clientReceiver.receive(corrId))) {
-                    return Response.ok().build();
+                return Response.ok().build();
 //                } else {
 //                    throw new EndpointException();
 //                }

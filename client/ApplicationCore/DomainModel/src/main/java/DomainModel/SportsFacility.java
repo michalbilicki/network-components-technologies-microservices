@@ -43,7 +43,7 @@ public class SportsFacility {
         return Objects.hash(id);
     }
 
-    public boolean isAccess(){
+    public boolean isAccess() {
         return access;
     }
 

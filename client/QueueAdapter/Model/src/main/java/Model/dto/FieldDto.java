@@ -5,7 +5,6 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.json.bind.annotation.JsonbNillable;
-import javax.xml.bind.annotation.*;
 import java.io.Serializable;
 
 @Data

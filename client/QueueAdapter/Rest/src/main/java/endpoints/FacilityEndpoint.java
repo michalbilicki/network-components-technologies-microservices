@@ -1,8 +1,8 @@
 package endpoints;
 
 import ApplicationPorts.User.SportFacilityServiceUseCase;
-import Model.ViewFacilityConverter;
 import DomainModel.SportsFacility;
+import Model.ViewFacilityConverter;
 import Model.dto.BasketballFacilityDto;
 import Model.dto.FootballFacilityDto;
 import Model.dto.SportsFacilityDto;
