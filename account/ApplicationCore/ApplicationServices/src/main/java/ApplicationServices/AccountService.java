@@ -22,12 +22,12 @@ public class AccountService implements AccountServiceUseCase {
     }
 
     @Override
-    public Account getAccount(UUID id) throws RepositoryConverterException {
+    public Account getAccount(UUID id) {
         return accountPort.getAccount(id);
     }
 
     @Override
-    public List<Account> getAllAccount() throws RepositoryConverterException {
+    public List<Account> getAllAccount() {
         return accountPort.getAllAccounts();
     }
 

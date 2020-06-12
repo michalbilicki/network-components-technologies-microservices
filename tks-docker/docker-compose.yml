@@ -23,6 +23,16 @@ services:
     ports:
       - 4848:4848
       - 8080:8080
+
+  supervisor-service:
+    build: ./supervisor-service
+    depends_on: 
+      - api-gateway-service
+    networks: 
+      - test-network
+    ports:
+      - 4803:4848
+      - 8003:8080
   
   account:
     build: ./service1-account

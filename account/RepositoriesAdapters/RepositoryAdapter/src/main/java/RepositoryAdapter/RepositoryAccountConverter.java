@@ -4,7 +4,6 @@ import DataModel.AccountEnt;
 import DataModel.RoleEnt;
 import DomainModel.Account;
 import DomainModel.Role;
-import exceptions.RepositoryConverterException;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,7 +11,7 @@ import java.util.UUID;
 
 public class RepositoryAccountConverter {
 
-    public static Account convertTo(AccountEnt obj) throws RepositoryConverterException {
+    public static Account convertTo(AccountEnt obj) {
         if (obj == null)
             return null;
         List<Role> roles = new ArrayList<Role>();
@@ -31,7 +30,7 @@ public class RepositoryAccountConverter {
         );
     }
 
-    public static AccountEnt convertFrom(Account obj, List<RoleEnt> list) throws RepositoryConverterException {
+    public static AccountEnt convertFrom(Account obj, List<RoleEnt> list) {
         if (obj == null || list == null)
             return null;
 

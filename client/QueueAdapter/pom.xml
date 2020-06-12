@@ -11,7 +11,6 @@
     <packaging>pom</packaging>
 
     <modules>
-        <module>Rest</module>
         <module>Model</module>
         <module>Queue</module>
     </modules>

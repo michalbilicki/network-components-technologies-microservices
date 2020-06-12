@@ -1,4 +1,5 @@
 import endpoints.AccountEndpoint;
+import endpoints.ClientEndpoint;
 import endpoints.FacilityEndpoint;
 import endpoints.ReservationEndpoint;
 
@@ -14,6 +15,7 @@ public class ApplicationRestConfig extends Application {
     public Set<Class<?>> getClasses() {
         HashSet<Class<?>> h = new HashSet<Class<?>>();
         h.add(AccountEndpoint.class);
+        h.add(ClientEndpoint.class);
         h.add(ReservationEndpoint.class);
         h.add(FacilityEndpoint.class);
         return h;

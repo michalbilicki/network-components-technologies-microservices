@@ -12,6 +12,7 @@
     <option name="ignoredFiles">
       <set>
         <option value="$PROJECT_DIR$/QueueAdapter/Queue/pom.xml" />
+        <option value="$PROJECT_DIR$/QueueAdapter/Rest/pom.xml" />
         <option value="$PROJECT_DIR$/ViewAdapter/Soap/pom.xml" />
       </set>
     </option>

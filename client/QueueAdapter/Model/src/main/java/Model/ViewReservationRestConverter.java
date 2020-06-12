@@ -6,6 +6,10 @@ import Model.dto.ReservationDto;
 public class ViewReservationRestConverter {
 
     public static ReservationDto convertTo(Reservation arg) {
+        if (arg == null) {
+            return null;
+        }
+
         return new ReservationDto(
                 arg.getId(),
                 arg.getClientId(),

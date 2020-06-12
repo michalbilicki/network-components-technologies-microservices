@@ -11,6 +11,8 @@ public interface ClientPort {
 
     Client get(UUID id) throws RepositoryException;
 
+    void remove(UUID id) throws RepositoryException;
+
     List<Client> getAll();
 
     void update(Client arg) throws RepositoryException;

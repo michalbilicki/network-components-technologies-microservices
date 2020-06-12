@@ -7,7 +7,6 @@ import DomainModel.Account;
 import DomainModel.Role;
 import Repository.AccountRepository;
 import Repository.RoleRepository;
-import exceptions.RepositoryConverterException;
 import exceptions.RepositoryException;
 
 import javax.enterprise.context.ApplicationScoped;
@@ -31,12 +30,12 @@ public class RepositoryAccountAdapter
     private RoleRepository roleRepository;
 
     @Override
-    public Account getAccount(UUID id) throws RepositoryConverterException {
+    public Account getAccount(UUID id) {
         return RepositoryAccountConverter.convertTo(accountRepository.get(id.toString()));
     }
 
     @Override
-    public List<Account> getAllAccounts() throws RepositoryConverterException {
+    public List<Account> getAllAccounts() {
         List<AccountEnt> toConvert = accountRepository.getAll();
         List<Account> result = new ArrayList<Account>();
 
@@ -57,7 +56,7 @@ public class RepositoryAccountAdapter
     }
 
     @Override
-    public void addAccount(Account arg) throws RepositoryException, RepositoryConverterException {
+    public void addAccount(Account arg) throws RepositoryException {
         List<RoleEnt> list = new ArrayList<>();
         for (Role item : arg.getRoles()) {
             list.add(this.roleRepository.getByBusinessId(item.getName()));
@@ -67,19 +66,15 @@ public class RepositoryAccountAdapter
 
     @Override
     public void updateAccount(Account arg) throws RepositoryException {
-        try {
-            List<RoleEnt> list = new ArrayList<>();
-            for (Role item : arg.getRoles()) {
-                list.add(this.roleRepository.getByBusinessId(item.getName()));
-            }
-            accountRepository.update(RepositoryAccountConverter.convertFrom(arg, list));
-        } catch (RepositoryConverterException e) {
-            e.printStackTrace();
+        List<RoleEnt> list = new ArrayList<>();
+        for (Role item : arg.getRoles()) {
+            list.add(this.roleRepository.getByBusinessId(item.getName()));
         }
+        accountRepository.update(RepositoryAccountConverter.convertFrom(arg, list));
     }
 
     @Override
-    public List<Account> getFilteredAccount(Predicate<Account> predicate) throws RepositoryConverterException {
+    public List<Account> getFilteredAccount(Predicate<Account> predicate) {
         return this.getAllAccounts().stream().filter(predicate).collect(Collectors.toList());
     }
 }

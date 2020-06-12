@@ -19,7 +19,7 @@ public interface AccountServiceUseCase {
 
     Account getAccount(UUID id) throws RepositoryConverterException;
 
-    List<Account> getAllAccount() throws RepositoryConverterException;
+    List<Account> getAllAccount();
 
     void removeAccount(UUID id) throws RepositoryException;
 

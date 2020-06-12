@@ -5,7 +5,6 @@ import DomainModel.Account;
 import Model.AccountDto;
 import Model.ViewAccountConverter;
 import com.rabbitmq.client.*;
-import exceptions.RepositoryConverterException;
 import utils.Consts;
 
 import javax.ejb.Singleton;
@@ -49,20 +48,15 @@ public class GetAllAccountsReceiver {
                     System.out.println("[ RECEIVE ] ACCOUNT - get all accounts");
 
                     Sender sender = new Sender(Consts.GET_ALL_ACCOUNT_QUEUE);
-                    try {
-                        List<Account> accounts = accountServiceUseCase.getAllAccount();
-                        ViewAccountConverter viewAccountConverter = new ViewAccountConverter();
+                    List<Account> accounts = accountServiceUseCase.getAllAccount();
+                    ViewAccountConverter viewAccountConverter = new ViewAccountConverter();
 
-                        List<AccountDto> list = new ArrayList<AccountDto>();
-                        for (Account item : accounts) {
-                            list.add(viewAccountConverter.convertTo(item));
-                        }
-
-                        sender.send(jsonb.toJson(list), id);
-                    } catch (RepositoryConverterException e) {
-                        sender.send(Boolean.toString(false), id);
+                    List<AccountDto> list = new ArrayList<>();
+                    for (Account item : accounts) {
+                        list.add(viewAccountConverter.convertTo(item));
                     }
 
+                    sender.send(jsonb.toJson(list), id);
                 }
             });
         } catch (TimeoutException | IOException e) {

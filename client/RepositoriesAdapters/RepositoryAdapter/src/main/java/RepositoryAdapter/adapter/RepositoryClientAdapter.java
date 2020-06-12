@@ -27,6 +27,11 @@ public class RepositoryClientAdapter implements ClientPort {
     }
 
     @Override
+    public void remove(UUID id) throws RepositoryException {
+        clientRepository.remove(id.toString());
+    }
+
+    @Override
     public List<Client> getAll() {
         List<ClientEnt> toConvert = clientRepository.getAll();
         List<Client> result = new ArrayList<>();

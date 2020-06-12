@@ -6,10 +6,7 @@ import ApplicationPorts.User.ClientServiceUseCase;
 import DomainModel.Client;
 import DomainModel.Reservation;
 import DomainModel.SportsFacility;
-import exceptions.RepositoryConverterException;
-import exceptions.RepositoryException;
-import exceptions.ReservationError;
-import exceptions.SportsFacilityDoesNotExists;
+import exceptions.*;
 
 import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
@@ -24,10 +21,13 @@ public class ClientService implements ClientServiceUseCase {
 
     @Inject
     FacilityService facilityService;
+
     @Inject
     private ClientPort clientPort;
+
     @Inject
     private ReservationPort reservationPort;
+
     @Inject
     private ReservationService reservationService;
 
@@ -39,8 +39,12 @@ public class ClientService implements ClientServiceUseCase {
     }
 
     @Override
-    public void createReservation(UUID clientId, UUID sportsFacilityId, LocalDateTime start, LocalDateTime end) throws RepositoryException, RepositoryConverterException, SportsFacilityDoesNotExists, ReservationError {
+    public void createReservation(UUID clientId, UUID sportsFacilityId, LocalDateTime start, LocalDateTime end) throws RepositoryException, RepositoryConverterException, SportsFacilityDoesNotExists, ReservationError, ClientDoesNotExistException {
         Client client = clientPort.get(clientId);
+        if (client == null) {
+            throw new ClientDoesNotExistException();
+        }
+
         SportsFacility sportsFacility = facilityService.getSportsFacility(sportsFacilityId);
         if (sportsFacility == null) {
             throw new SportsFacilityDoesNotExists();
@@ -70,6 +74,29 @@ public class ClientService implements ClientServiceUseCase {
     @Override
     public List<Client> getAllClients() {
         return clientPort.getAll();
+    }
+
+    @Override
+    public void blockClient(UUID id) throws RepositoryException {
+        Client client = getClient(id);
+        if (client != null) {
+            client.block();
+            updateClient(client);
+        }
+    }
+
+    @Override
+    public void unblockClient(UUID id) throws RepositoryException {
+        Client client = getClient(id);
+        if (client != null) {
+            client.unblock();
+            updateClient(client);
+        }
+    }
+
+    @Override
+    public void removeClient(UUID id) throws RepositoryException {
+        clientPort.remove(id);
     }
 
     @Override

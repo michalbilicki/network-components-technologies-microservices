@@ -20,6 +20,17 @@ public class Client {
         this.active = active;
     }
 
+    public void block() {
+        if (active)
+            active = false;
+    }
+
+    public void unblock() {
+        if (!active) {
+            active = true;
+        }
+    }
+
     public String getId() {
         return id;
     }

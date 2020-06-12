@@ -13,6 +13,10 @@ public class ViewAccountConverter implements ViewTwoWayConverter<AccountDto, Acc
 
     @Override
     public AccountDto convertTo(Account arg) {
+        if (arg == null) {
+            return null;
+        }
+
         //String id, String login, String password, String fullName, boolean active, List<String> roles
         return new AccountDto(
                 arg.getAccountId().toString(),

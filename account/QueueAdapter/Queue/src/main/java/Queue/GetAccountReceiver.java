@@ -2,6 +2,7 @@ package Queue;
 
 import ApplicationPorts.AccountServiceUseCase;
 import DomainModel.Account;
+import Model.AccountDto;
 import Model.ViewAccountConverter;
 import com.rabbitmq.client.*;
 import exceptions.RepositoryConverterException;
@@ -50,7 +51,8 @@ public class GetAccountReceiver {
                     try {
                         Account account = accountServiceUseCase.getAccount(UUID.fromString(id));
                         ViewAccountConverter viewAccountConverter = new ViewAccountConverter();
-                        sender.send(jsonb.toJson(viewAccountConverter.convertTo(account)), id);
+                        AccountDto accountDto = viewAccountConverter.convertTo(account);
+                        sender.send(jsonb.toJson(accountDto), id);
                     } catch (RepositoryConverterException e) {
                         sender.send(Boolean.toString(false), id);
                     }
