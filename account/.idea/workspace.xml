@@ -7,111 +7,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="28bf7cc8-64e0-43c3-9c70-b474a8cfb9bf" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Common/src/main/java/exceptions/SenderException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../api-gateway/.idea/libraries/Java_EE_6_Java_EE_6.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../api-gateway/src/main/java/endpoints/ClientEndpoint.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../api-gateway/src/main/java/managers/ClientManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../api-gateway/src/main/java/managers/FacilityManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../api-gateway/src/main/java/managers/ReservationManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../api-gateway/src/main/java/utils/exception/ManagerException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../api-gateway/src/main/java/utils/exception/SenderException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../client/Common/src/main/java/exceptions/ClientDoesNotExistException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../client/QueueAdapter/Queue/src/main/java/Client/AddReceiver.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../client/QueueAdapter/Queue/src/main/java/Client/BlockReceiver.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../client/QueueAdapter/Queue/src/main/java/Client/GetAllReceiver.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../client/QueueAdapter/Queue/src/main/java/Client/GetReceiver.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../client/QueueAdapter/Queue/src/main/java/Client/RemoveReceiver.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../client/QueueAdapter/Queue/src/main/java/Client/UnblockReceiver.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../client/QueueAdapter/Queue/src/main/java/Client/UpdateReceiver.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../client/QueueAdapter/Queue/src/main/java/Reservation/CancelReceiver.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../client/QueueAdapter/Queue/src/main/java/Reservation/GetAllReceiver.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../client/QueueAdapter/Queue/src/main/java/Reservation/GetClientReservationsReceiver.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../client/QueueAdapter/Queue/src/main/java/Reservation/GetReceiver.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../client/QueueAdapter/Queue/src/main/java/Reservation/MakeReceiver.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../client/QueueAdapter/Queue/src/main/java/Reservation/RemoveReceiver.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../supervisor/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../supervisor/.idea/artifacts/AppWar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../supervisor/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../supervisor/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../supervisor/.idea/libraries/Java_EE_6_Java_EE_6.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../supervisor/.idea/libraries/Java_EE_6_Java_EE_6__2_.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../supervisor/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../supervisor/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../supervisor/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../supervisor/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../supervisor/src/main/java/dto/AccountDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../supervisor/src/main/java/dto/BasketballFacilityDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../supervisor/src/main/java/dto/ClientDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../supervisor/src/main/java/dto/FieldDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../supervisor/src/main/java/dto/FootballFacilityDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../supervisor/src/main/java/dto/ReservationDetailsDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../supervisor/src/main/java/dto/ReservationDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../supervisor/src/main/java/dto/SportsFacilityDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../supervisor/src/main/java/queue/Receiver.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../supervisor/src/main/java/queue/Sender.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../supervisor/src/main/java/queue/repair/AddAccountRepair.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../supervisor/src/main/java/queue/repair/BlockAccountRepair.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../supervisor/src/main/java/queue/repair/RemoveAccountRepair.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../supervisor/src/main/java/queue/repair/UnblockAccountRepair.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../supervisor/src/main/java/queue/repair/UpdateAccountRepair.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../supervisor/src/main/java/utils/Consts.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../supervisor/src/main/java/utils/exception/SenderException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../supervisor/supervisor.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../tks-docker/supervisor-service/Dockerfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ApplicationCore/ApplicationServices/src/main/java/ApplicationServices/AccountService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ApplicationCore/ApplicationServices/src/main/java/ApplicationServices/AccountService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ApplicationPorts/src/main/java/ApplicationPorts/AccountPort.java" beforeDir="false" afterPath="$PROJECT_DIR$/ApplicationPorts/src/main/java/ApplicationPorts/AccountPort.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ApplicationPorts/src/main/java/ApplicationPorts/AccountServiceUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/ApplicationPorts/src/main/java/ApplicationPorts/AccountServiceUseCase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Common/src/main/java/utils/Consts.java" beforeDir="false" afterPath="$PROJECT_DIR$/Common/src/main/java/utils/Consts.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/QueueAdapter/Model/src/main/java/Model/ViewAccountConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/QueueAdapter/Model/src/main/java/Model/ViewAccountConverter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/QueueAdapter/Queue/src/main/java/Queue/AddAccountReceiver.java" beforeDir="false" afterPath="$PROJECT_DIR$/QueueAdapter/Queue/src/main/java/Queue/AddAccountReceiver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/QueueAdapter/Queue/src/main/java/Queue/GetAccountReceiver.java" beforeDir="false" afterPath="$PROJECT_DIR$/QueueAdapter/Queue/src/main/java/Queue/GetAccountReceiver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/QueueAdapter/Queue/src/main/java/Queue/GetAllAccountsReceiver.java" beforeDir="false" afterPath="$PROJECT_DIR$/QueueAdapter/Queue/src/main/java/Queue/GetAllAccountsReceiver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RepositoriesAdapters/RepositoryAdapter/src/main/java/RepositoryAdapter/RepositoryAccountAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/RepositoriesAdapters/RepositoryAdapter/src/main/java/RepositoryAdapter/RepositoryAccountAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RepositoriesAdapters/RepositoryAdapter/src/main/java/RepositoryAdapter/RepositoryAccountConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/RepositoriesAdapters/RepositoryAdapter/src/main/java/RepositoryAdapter/RepositoryAccountConverter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../api-gateway/.idea/artifacts/AppWar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../api-gateway/.idea/artifacts/AppWar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../api-gateway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../api-gateway/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../api-gateway/src/main/java/ApplicationRestConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../api-gateway/src/main/java/ApplicationRestConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../api-gateway/src/main/java/endpoints/AccountEndpoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/../api-gateway/src/main/java/endpoints/AccountEndpoint.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../api-gateway/src/main/java/endpoints/FacilityEndpoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/../api-gateway/src/main/java/endpoints/FacilityEndpoint.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../api-gateway/src/main/java/endpoints/ReservationEndpoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/../api-gateway/src/main/java/endpoints/ReservationEndpoint.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api-gateway/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../api-gateway/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../api-gateway/src/main/java/managers/AccountManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/../api-gateway/src/main/java/managers/AccountManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../api-gateway/src/main/java/queue/Receiver.java" beforeDir="false" afterPath="$PROJECT_DIR$/../api-gateway/src/main/java/queue/Receiver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../api-gateway/src/main/java/queue/Receiver2.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../api-gateway/src/main/java/queue/Sender.java" beforeDir="false" afterPath="$PROJECT_DIR$/../api-gateway/src/main/java/queue/Sender.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../api-gateway/src/main/java/utils/Consts.java" beforeDir="false" afterPath="$PROJECT_DIR$/../api-gateway/src/main/java/utils/Consts.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../api-gateway/src/main/java/utils/exception/EndpointException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/.idea/artifacts/AppWar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../client/.idea/artifacts/AppWar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../client/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../client/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../client/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../client/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/ApplicationCore/ApplicationServices/src/main/java/ApplicationServices/ClientService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../client/ApplicationCore/ApplicationServices/src/main/java/ApplicationServices/ClientService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/ApplicationCore/DomainModel/src/main/java/DomainModel/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/../client/ApplicationCore/DomainModel/src/main/java/DomainModel/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/ApplicationPorts/src/main/java/ApplicationPorts/Infrastructure/ClientPort.java" beforeDir="false" afterPath="$PROJECT_DIR$/../client/ApplicationPorts/src/main/java/ApplicationPorts/Infrastructure/ClientPort.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/ApplicationPorts/src/main/java/ApplicationPorts/User/ClientServiceUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/../client/ApplicationPorts/src/main/java/ApplicationPorts/User/ClientServiceUseCase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/Common/src/main/java/utils/Consts.java" beforeDir="false" afterPath="$PROJECT_DIR$/../client/Common/src/main/java/utils/Consts.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/QueueAdapter/Model/src/main/java/Model/ViewClientRestConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../client/QueueAdapter/Model/src/main/java/Model/ViewClientConverter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/QueueAdapter/Model/src/main/java/Model/ViewReservationRestConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../client/QueueAdapter/Model/src/main/java/Model/ViewReservationRestConverter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/QueueAdapter/Rest/Rest.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/QueueAdapter/Rest/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/QueueAdapter/Rest/src/main/java/ApplicationRestConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/QueueAdapter/Rest/src/main/java/endpoints/ClientEndpoint.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/QueueAdapter/Rest/src/main/java/endpoints/FacilityEndpoint.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/QueueAdapter/Rest/src/main/java/endpoints/ReservationEndpoint.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/QueueAdapter/Rest/src/main/java/exception/ClientException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/QueueAdapter/Rest/src/main/java/exception/ClientNotFoundException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/QueueAdapter/Rest/src/main/java/exception/ReservationException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/QueueAdapter/Rest/src/main/java/exception/ReservationNotFoundException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/QueueAdapter/Rest/src/main/java/exception/SportsFacilityException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/QueueAdapter/Rest/src/main/java/exception/SportsFacilityNotFoundException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/QueueAdapter/Rest/src/test/java/AbstractContainerBase.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/QueueAdapter/Rest/src/test/java/ClientServiceTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/QueueAdapter/Rest/src/test/java/ReservationTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/QueueAdapter/Rest/src/test/java/SportsFacilityTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/QueueAdapter/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../client/QueueAdapter/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/RepositoriesAdapters/RepositoryAdapter/src/main/java/RepositoryAdapter/adapter/RepositoryClientAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../client/RepositoriesAdapters/RepositoryAdapter/src/main/java/RepositoryAdapter/adapter/RepositoryClientAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../tks-docker/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../tks-docker/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/QueueAdapter/Queue/src/main/java/Client/AddReceiver.java" beforeDir="false" afterPath="$PROJECT_DIR$/../client/QueueAdapter/Queue/src/main/java/Client/AddReceiver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../supervisor/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../supervisor/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../supervisor/src/main/java/queue/Sender.java" beforeDir="false" afterPath="$PROJECT_DIR$/../supervisor/src/main/java/queue/Sender.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../supervisor/src/main/java/queue/repair/AddAccountRepair.java" beforeDir="false" afterPath="$PROJECT_DIR$/../supervisor/src/main/java/queue/repair/AddAccountRepair.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../supervisor/src/main/java/queue/repair/BlockAccountRepair.java" beforeDir="false" afterPath="$PROJECT_DIR$/../supervisor/src/main/java/queue/repair/BlockAccountRepair.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../supervisor/src/main/java/queue/repair/RemoveAccountRepair.java" beforeDir="false" afterPath="$PROJECT_DIR$/../supervisor/src/main/java/queue/repair/RemoveAccountRepair.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../supervisor/src/main/java/queue/repair/UnblockAccountRepair.java" beforeDir="false" afterPath="$PROJECT_DIR$/../supervisor/src/main/java/queue/repair/UnblockAccountRepair.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../supervisor/src/main/java/queue/repair/UpdateAccountRepair.java" beforeDir="false" afterPath="$PROJECT_DIR$/../supervisor/src/main/java/queue/repair/UpdateAccountRepair.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../supervisor/src/main/java/utils/Consts.java" beforeDir="false" afterPath="$PROJECT_DIR$/../supervisor/src/main/java/utils/Consts.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -182,7 +91,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/QueueAdapter/Queue/src/main/java/Queue/Test" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../supervisor" />
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.47126436" />
@@ -530,6 +439,7 @@
       <workItem from="1591868191303" duration="8867000" />
       <workItem from="1591892760136" duration="5190000" />
       <workItem from="1591997060649" duration="5582000" />
+      <workItem from="1592038421663" duration="10288000" />
     </task>
     <servers />
   </component>
@@ -635,11 +545,11 @@
     </state>
     <state x="715" y="228" key="#xdebugger.evaluate/0.0.1920.1050/-1920.0.1536.834@0.0.1920.1050" timestamp="1587037904933" />
     <state x="777" y="59" key="#xdebugger.evaluate/0.0.1920.1050/1920.0.1536.834@0.0.1920.1050" timestamp="1591223612334" />
-    <state x="740" y="258" key="FileChooserDialogImpl" timestamp="1591803316211">
+    <state x="740" y="258" key="FileChooserDialogImpl" timestamp="1592039149055">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="740" y="258" key="FileChooserDialogImpl/0.0.1920.1050/-1920.0.1536.834@0.0.1920.1050" timestamp="1587332831065" />
-    <state x="740" y="258" key="FileChooserDialogImpl/0.0.1920.1050/1920.0.1536.834@0.0.1920.1050" timestamp="1591803316211" />
+    <state x="740" y="258" key="FileChooserDialogImpl/0.0.1920.1050/1920.0.1536.834@0.0.1920.1050" timestamp="1592039149055" />
     <state x="2512" y="205" key="FileChooserDialogImpl/0.0.1920.1050/1920.0.1536.834@1920.0.1536.834" timestamp="1590933235257" />
     <state width="1877" height="329" key="GridCell.Tab.0.bottom" timestamp="1591806064507">
       <screen x="0" y="0" width="1920" height="1050" />
@@ -726,11 +636,11 @@
     </state>
     <state x="637" y="222" key="Maven.ArtifactSearchDialog/0.0.1920.1050/-1920.0.1536.834@0.0.1920.1050" timestamp="1587218247859" />
     <state x="637" y="222" key="Maven.ArtifactSearchDialog/0.0.1920.1050/1920.0.1536.834@0.0.1920.1050" timestamp="1591263302214" />
-    <state x="440" y="99" key="SettingsEditor" timestamp="1592004313319">
+    <state x="440" y="99" key="SettingsEditor" timestamp="1592046754944">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="440" y="99" key="SettingsEditor/0.0.1920.1050/-1920.0.1536.834@0.0.1920.1050" timestamp="1587336145879" />
-    <state x="440" y="99" key="SettingsEditor/0.0.1920.1050/1920.0.1536.834@0.0.1920.1050" timestamp="1592004313319" />
+    <state x="440" y="99" key="SettingsEditor/0.0.1920.1050/1920.0.1536.834@0.0.1920.1050" timestamp="1592046754944" />
     <state width="254" height="198" key="ShowFilterAction_Filter_Popup" timestamp="1586992332710">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
@@ -739,11 +649,11 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="499" height="468" key="SwitcherDM/0.0.1920.1050/1920.0.1536.834@0.0.1920.1050" timestamp="1591222760971" />
-    <state x="655" y="349" key="com.intellij.ide.util.TipDialog" timestamp="1591893362054">
+    <state x="655" y="349" key="com.intellij.ide.util.TipDialog" timestamp="1592039084652">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="655" y="349" key="com.intellij.ide.util.TipDialog/0.0.1920.1050/-1920.0.1536.834@0.0.1920.1050" timestamp="1587380670288" />
-    <state x="655" y="349" key="com.intellij.ide.util.TipDialog/0.0.1920.1050/1920.0.1536.834@0.0.1920.1050" timestamp="1591893362054" />
+    <state x="655" y="349" key="com.intellij.ide.util.TipDialog/0.0.1920.1050/1920.0.1536.834@0.0.1920.1050" timestamp="1592039084652" />
     <state x="655" y="349" key="com.intellij.ide.util.TipDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1585410398579" />
     <state x="664" y="418" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1590753723725">
       <screen x="0" y="0" width="1920" height="1050" />

@@ -36,15 +36,14 @@ public class AccountManager {
 
     private void addClient(AccountDto accountDto) throws ManagerException, SenderException {
         String corrId = accountDto.getId();
-        //TODO
-//        ClientDto clientDto = ClientDto.convertFrom(accountDto);
-//        Sender<ClientDto> clientSender = new Sender<>(Consts.ADD_CLIENT_QUEUE);
-//        clientSender.send(clientDto, corrId);
-//        Receiver clientReceiver = new Receiver(Consts.ADD_CLIENT_QUEUE);
-//        if (!Boolean.parseBoolean(clientReceiver.receive(corrId))) {
+        ClientDto clientDto = ClientDto.convertFrom(accountDto);
+        Sender<ClientDto> clientSender = new Sender<>(Consts.ADD_CLIENT_QUEUE);
+        clientSender.send(clientDto, corrId);
+        Receiver clientReceiver = new Receiver(Consts.ADD_CLIENT_QUEUE);
+        if (!Boolean.parseBoolean(clientReceiver.receive(corrId))) {
             addAccountRepair(accountDto);
             throw new ManagerException();
-//        }
+        }
     }
 
     private void addAccountRepair(AccountDto accountDto) throws SenderException {
@@ -99,7 +98,7 @@ public class AccountManager {
         Receiver updateReceiver = new Receiver(Consts.UPDATE_ACCOUNT_QUEUE);
         if (Boolean.parseBoolean(updateReceiver.receive(corrId))) {
             if (accountDto.getRoles().contains("Client") && checkAccountDto.getRoles().contains("Client")) {
-                updateClient(accountDto);
+                updateClient(accountDto, checkAccountDto);
             } else if (!accountDto.getRoles().contains("Client") && checkAccountDto.getRoles().contains("Client")) {
                 deleteClient(checkAccountDto);
             }
@@ -108,15 +107,14 @@ public class AccountManager {
         }
     }
 
-    private void updateClient(AccountDto accountDto) throws SenderException, ManagerException {
+    private void updateClient(AccountDto accountDto, AccountDto checkAccountDto) throws SenderException, ManagerException {
         String corrId = accountDto.getId();
         Sender<String> updateSender = new Sender<>(Consts.UPDATE_CLIENT_QUEUE);
         updateSender.send(accountDto.getId(), corrId);
         Receiver updateReceiver = new Receiver(Consts.UPDATE_CLIENT_QUEUE);
         if (!Boolean.parseBoolean(updateReceiver.receive(corrId))) {
-            updateAccountRepair(accountDto);
+            updateAccountRepair(checkAccountDto);
             throw new ManagerException();
-
         }
     }
 

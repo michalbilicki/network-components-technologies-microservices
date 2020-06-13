@@ -12,10 +12,10 @@ public class Consts {
     public static String GET_ALL_ACCOUNT_QUEUE = "GET_ALL_ACCOUNT_QUEUE";
 
     public static String ADD_ACCOUNT_REPAIR = "ADD_ACCOUNT_REPAIR";
-    public static String UPDATE_ACCOUNT_REPAIR = "ADD_ACCOUNT_REPAIR";
-    public static String REMOVE_ACCOUNT_REPAIR = "ADD_ACCOUNT_REPAIR";
-    public static String BLOCK_ACCOUNT_REPAIR = "ADD_ACCOUNT_REPAIR";
-    public static String UNBLOCK_ACCOUNT_REPAIR = "ADD_ACCOUNT_REPAIR";
+    public static String UPDATE_ACCOUNT_REPAIR = "UPDATE_ACCOUNT_REPAIR";
+    public static String REMOVE_ACCOUNT_REPAIR = "REMOVE_ACCOUNT_REPAIR";
+    public static String BLOCK_ACCOUNT_REPAIR = "BLOCK_ACCOUNT_REPAIR";
+    public static String UNBLOCK_ACCOUNT_REPAIR = "UNBLOCK_ACCOUNT_REPAIR";
 
     public static String ADD_CLIENT_QUEUE = "ADD_CLIENT_QUEUE";
     public static String REMOVE_CLIENT_QUEUE = "REMOVE_CLIENT_QUEUE";

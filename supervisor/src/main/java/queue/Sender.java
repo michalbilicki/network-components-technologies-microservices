@@ -37,7 +37,7 @@ public class Sender<T> {
 
             channel.basicPublish("", queueName, props, jsonb.toJson(arg).getBytes(StandardCharsets.UTF_8));
 
-            System.out.println("[ SEND ] API_GATEWAY: " + arg);
+            System.out.println("[ SEND ] SUPERVISOR: " + arg);
         } catch (IOException | TimeoutException e) {
             e.printStackTrace();
         }
@@ -50,8 +50,8 @@ public class Sender<T> {
             channel.queueDeclare(queueName, true, false, false, null);
             String message = jsonb.toJson(arg);
 
-            channel.basicPublish("", queueName, MessageProperties.PERSISTENT_TEXT_PLAIN, message.getBytes(StandardCharsets.UTF_8));
-            System.out.println("[ REPAIR SEND ]    API_GATEWAY: " + message);
+            channel.basicPublish("", queueName, MessageProperties.PERSISTENT_TEXT_PLAIN, jsonb.toJson(arg).getBytes(StandardCharsets.UTF_8));
+            System.out.println("[ aSEND ] SUPERVISOR: " + message);
         } catch (TimeoutException | IOException e) {
             throw new SenderException();
         }

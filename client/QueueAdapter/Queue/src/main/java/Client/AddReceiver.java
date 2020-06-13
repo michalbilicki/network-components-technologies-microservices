@@ -1,4 +1,4 @@
-package SportsFacility;
+package Client;
 
 import ApplicationPorts.User.ClientServiceUseCase;
 import DomainModel.Client;
