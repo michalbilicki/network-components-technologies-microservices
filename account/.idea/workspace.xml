@@ -7,13 +7,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="28bf7cc8-64e0-43c3-9c70-b474a8cfb9bf" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../api-gateway/src/main/java/managers/sss.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../api-gateway/src/main/java/managers/AccountManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/../api-gateway/src/main/java/managers/AccountManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../supervisor/src/main/java/queue/repair/BlockAccountRepair.java" beforeDir="false" afterPath="$PROJECT_DIR$/../supervisor/src/main/java/queue/repair/BlockAccountRepair.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../supervisor/src/main/java/queue/repair/RemoveAccountRepair.java" beforeDir="false" afterPath="$PROJECT_DIR$/../supervisor/src/main/java/queue/repair/RemoveAccountRepair.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../supervisor/src/main/java/queue/repair/UnblockAccountRepair.java" beforeDir="false" afterPath="$PROJECT_DIR$/../supervisor/src/main/java/queue/repair/UnblockAccountRepair.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../supervisor/src/main/java/queue/repair/UpdateAccountRepair.java" beforeDir="false" afterPath="$PROJECT_DIR$/../supervisor/src/main/java/queue/repair/UpdateAccountRepair.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api-gateway/src/main/java/managers/sss.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -435,7 +430,7 @@
       <workItem from="1592038421663" duration="10467000" />
       <workItem from="1592059339037" duration="1313000" />
       <workItem from="1592144992445" duration="18000" />
-      <workItem from="1592165652991" duration="1824000" />
+      <workItem from="1592165652991" duration="2131000" />
     </task>
     <servers />
   </component>
