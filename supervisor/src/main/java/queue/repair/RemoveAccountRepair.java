@@ -58,7 +58,7 @@ public class RemoveAccountRepair implements Serializable {
                     channel.basicAck(delivery.getEnvelope().getDeliveryTag(), false);
                 }
             };
-            channel.basicConsume(Consts.ADD_ACCOUNT_REPAIR, false, deliverCallback, consumerTag -> {
+            channel.basicConsume(Consts.REMOVE_ACCOUNT_REPAIR, false, deliverCallback, consumerTag -> {
             });
         } catch (TimeoutException | IOException e) {
             e.printStackTrace();

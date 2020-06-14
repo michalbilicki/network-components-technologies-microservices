@@ -2,6 +2,7 @@ package managers;
 
 import dto.AccountDto;
 import dto.ClientDto;
+import endpoints.ClientEndpoint;
 import queue.Receiver;
 import queue.Sender;
 import utils.Consts;
@@ -109,18 +110,18 @@ public class AccountManager {
 
     private void updateClient(AccountDto accountDto, AccountDto checkAccountDto) throws SenderException, ManagerException {
         String corrId = accountDto.getId();
-        Sender<String> updateSender = new Sender<>(Consts.UPDATE_CLIENT_QUEUE);
-        updateSender.send(accountDto.getId(), corrId);
-        Receiver updateReceiver = new Receiver(Consts.UPDATE_CLIENT_QUEUE);
-        if (!Boolean.parseBoolean(updateReceiver.receive(corrId))) {
+//        Sender<ClientDto> updateSender = new Sender<>(Consts.UPDATE_CLIENT_QUEUE);
+//        updateSender.send(ClientDto.convertFrom(accountDto), corrId);
+//        Receiver updateReceiver = new Receiver(Consts.UPDATE_CLIENT_QUEUE);
+//        if (!Boolean.parseBoolean(updateReceiver.receive(corrId))) {
             updateAccountRepair(checkAccountDto);
             throw new ManagerException();
-        }
+//        }
     }
 
-    private void updateAccountRepair(AccountDto accountDto) throws SenderException {
+    private void updateAccountRepair(AccountDto checkAccountDto) throws SenderException {
         Sender<AccountDto> repairSender = new Sender<>(Consts.UPDATE_ACCOUNT_REPAIR);
-        repairSender.asyncSend(accountDto);
+        repairSender.asyncSend(checkAccountDto);
     }
     //endregion
 
@@ -142,13 +143,13 @@ public class AccountManager {
 
     private void deleteClient(AccountDto accountDto) throws ManagerException, SenderException {
         String corrId = accountDto.getId();
-        Sender<String> deleteSender = new Sender<>(Consts.REMOVE_CLIENT_QUEUE);
-        deleteSender.send(accountDto.getId(), corrId);
-        Receiver deleteReceiver = new Receiver(Consts.REMOVE_CLIENT_QUEUE);
-        if (!Boolean.parseBoolean(deleteReceiver.receive(corrId))) {
+//        Sender<String> deleteSender = new Sender<>(Consts.REMOVE_CLIENT_QUEUE);
+//        deleteSender.send(accountDto.getId(), corrId);
+//        Receiver deleteReceiver = new Receiver(Consts.REMOVE_CLIENT_QUEUE);
+//        if (!Boolean.parseBoolean(deleteReceiver.receive(corrId))) {
             deleteAccountRepair(accountDto);
             throw new ManagerException();
-        }
+//        }
     }
 
     private void deleteAccountRepair(AccountDto accountDto) throws SenderException {
@@ -175,13 +176,13 @@ public class AccountManager {
 
     private void blockClient(AccountDto accountDto) throws SenderException, ManagerException {
         String corrId = accountDto.getId();
-        Sender<String> blockSender = new Sender<>(Consts.BLOCK_CLIENT_QUEUE);
-        blockSender.send(accountDto.getId(), corrId);
-        Receiver deleteReceiver = new Receiver(Consts.BLOCK_CLIENT_QUEUE);
-        if (!Boolean.parseBoolean(deleteReceiver.receive(corrId))) {
+//        Sender<String> blockSender = new Sender<>(Consts.BLOCK_CLIENT_QUEUE);
+//        blockSender.send(accountDto.getId(), corrId);
+//        Receiver deleteReceiver = new Receiver(Consts.BLOCK_CLIENT_QUEUE);
+//        if (!Boolean.parseBoolean(deleteReceiver.receive(corrId))) {
             blockAccountRepair(accountDto);
             throw new ManagerException();
-        }
+//        }
     }
 
     private void blockAccountRepair(AccountDto accountDto) throws SenderException {
@@ -208,13 +209,13 @@ public class AccountManager {
 
     private void unblockClient(AccountDto accountDto) throws SenderException, ManagerException {
         String corrId = accountDto.getId();
-        Sender<String> unblockSender = new Sender<>(Consts.UNBLOCK_CLIENT_QUEUE);
-        unblockSender.send(accountDto.getId(), corrId);
-        Receiver deleteReceiver = new Receiver(Consts.UNBLOCK_CLIENT_QUEUE);
-        if (!Boolean.parseBoolean(deleteReceiver.receive(corrId))) {
+//        Sender<String> unblockSender = new Sender<>(Consts.UNBLOCK_CLIENT_QUEUE);
+//        unblockSender.send(accountDto.getId(), corrId);
+//        Receiver deleteReceiver = new Receiver(Consts.UNBLOCK_CLIENT_QUEUE);
+//        if (!Boolean.parseBoolean(deleteReceiver.receive(corrId))) {
             unblockAccountRepair(accountDto);
             throw new ManagerException();
-        }
+//        }
     }
 
     private void unblockAccountRepair(AccountDto accountDto) throws SenderException {

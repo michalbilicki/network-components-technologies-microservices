@@ -57,7 +57,7 @@ public class UnblockAccountRepair implements Serializable {
                     channel.basicAck(delivery.getEnvelope().getDeliveryTag(), false);
                 }
             };
-            channel.basicConsume(Consts.ADD_ACCOUNT_REPAIR, false, deliverCallback, consumerTag -> {
+            channel.basicConsume(Consts.UNBLOCK_ACCOUNT_REPAIR, false, deliverCallback, consumerTag -> {
             });
         } catch (TimeoutException | IOException e) {
             e.printStackTrace();
