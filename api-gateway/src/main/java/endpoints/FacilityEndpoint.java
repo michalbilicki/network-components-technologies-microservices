@@ -4,6 +4,7 @@ import dto.BasketballFacilityDto;
 import dto.FootballFacilityDto;
 import managers.FacilityManager;
 import utils.exception.ManagerException;
+import utils.exception.SenderException;
 
 import javax.enterprise.context.RequestScoped;
 import javax.inject.Inject;
@@ -19,6 +20,18 @@ public class FacilityEndpoint {
     @Inject
     private FacilityManager facilityManager;
 
+//    @POST
+//    @Path("add/football")
+//    @Consumes(MediaType.APPLICATION_JSON)
+//    public Response addFootballFacility(FootballFacilityDto footballFacilityDto) {
+//        try {
+//            facilityManager.addFootballFacility(footballFacilityDto);
+//            return Response.ok().build();
+//        } catch (ManagerException e) {
+//            return Response.status(Response.Status.BAD_REQUEST).build();
+//        }
+//    }
+
     @POST
     @Path("add/football")
     @Consumes(MediaType.APPLICATION_JSON)
@@ -26,10 +39,22 @@ public class FacilityEndpoint {
         try {
             facilityManager.addFootballFacility(footballFacilityDto);
             return Response.ok().build();
-        } catch (ManagerException e) {
+        } catch (SenderException e) {
             return Response.status(Response.Status.BAD_REQUEST).build();
         }
     }
+
+//    @POST
+//    @Path("add/basketball")
+//    @Consumes(MediaType.APPLICATION_JSON)
+//    public Response addBasketBallFacility(BasketballFacilityDto basketballFacilityDto) {
+//        try {
+//            facilityManager.addBasketBallFacility(basketballFacilityDto);
+//            return Response.ok().build();
+//        } catch (ManagerException e) {
+//            return Response.status(Response.Status.BAD_REQUEST).build();
+//        }
+//    }
 
     @POST
     @Path("add/basketball")
@@ -38,7 +63,7 @@ public class FacilityEndpoint {
         try {
             facilityManager.addBasketBallFacility(basketballFacilityDto);
             return Response.ok().build();
-        } catch (ManagerException e) {
+        } catch (SenderException e) {
             return Response.status(Response.Status.BAD_REQUEST).build();
         }
     }
@@ -65,16 +90,39 @@ public class FacilityEndpoint {
         }
     }
 
+//    @DELETE
+//    @Path("delete/{id}")
+//    public Response removeSportsFacility(@PathParam("id") String id) {
+//        try {
+//            facilityManager.removeFacility(id);
+//            return Response.ok().build();
+//        } catch (ManagerException e) {
+//            return Response.status(Response.Status.BAD_REQUEST).build();
+//        }
+//    }
+
     @DELETE
     @Path("delete/{id}")
     public Response removeSportsFacility(@PathParam("id") String id) {
         try {
             facilityManager.removeFacility(id);
             return Response.ok().build();
-        } catch (ManagerException e) {
+        } catch (SenderException e) {
             return Response.status(Response.Status.BAD_REQUEST).build();
         }
     }
+
+//    @PUT
+//    @Path("update/football")
+//    @Consumes(MediaType.APPLICATION_JSON)
+//    public Response updateFootballFacility(FootballFacilityDto footballFacilityDto) {
+//        try {
+//            facilityManager.updateFootballFacility(footballFacilityDto);
+//            return Response.ok().build();
+//        } catch (ManagerException e) {
+//            return Response.status(Response.Status.BAD_REQUEST).build();
+//        }
+//    }
 
     @PUT
     @Path("update/football")
@@ -83,10 +131,22 @@ public class FacilityEndpoint {
         try {
             facilityManager.updateFootballFacility(footballFacilityDto);
             return Response.ok().build();
-        } catch (ManagerException e) {
+        } catch (SenderException e) {
             return Response.status(Response.Status.BAD_REQUEST).build();
         }
     }
+
+//    @PUT
+//    @Path("update/basketball")
+//    @Consumes(MediaType.APPLICATION_JSON)
+//    public Response updateBasketballFacility(BasketballFacilityDto basketballFacilityDto) {
+//        try {
+//            facilityManager.updateBasketballFacility(basketballFacilityDto);
+//            return Response.ok().build();
+//        } catch (ManagerException e) {
+//            return Response.status(Response.Status.BAD_REQUEST).build();
+//        }
+//    }
 
     @PUT
     @Path("update/basketball")
@@ -95,7 +155,7 @@ public class FacilityEndpoint {
         try {
             facilityManager.updateBasketballFacility(basketballFacilityDto);
             return Response.ok().build();
-        } catch (ManagerException e) {
+        } catch (SenderException e) {
             return Response.status(Response.Status.BAD_REQUEST).build();
         }
     }
